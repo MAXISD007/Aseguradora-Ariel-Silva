@@ -45,12 +45,15 @@
   --border-muted: oklch(0.7 var(--chroma) var(--hue));
   --border-card: solid 1px var(--bg);
   /* action */
-  --primary: hsl(143 79 34);
-  --primary-hover: hsl(143 79 36);
-  --primary-hover-active: hsl(143 79 30);
-  --primary-muted: hsl(143 40 60);
-  --secondary: hsl(143 50 85);
-  --secondary-hover: hsl(143 50 82);
+  --primary: #222b54;
+  --primary-hover: #1c2446;         /*primary-hover, primary-hover-active, primary-muted, las hice yo a ojo*/
+  --primary-hover-active: #323d6b;
+  --primary-muted: #152050; 
+  --secondary: #3a519f;
+  --secondary-hover: #4960a8;
+  --Tertiary: #bbd7eb;
+  --black: #1d1d1b;
+  --white: #edf1f6;
   /* alert */
   --danger: hsl(0 85 55);
   --warning: hsl(35 95 50);
