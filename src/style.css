@@ -1,0 +1,116 @@
+@import "tailwindcss";
+
+:root {
+  --font-sans: "Inter", "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  
+  font-family: var(--font-sans);
+  line-height: 1.5;
+  font-weight: 400;
+  scroll-behavior: smooth;
+
+  --hue: 264;
+  --hue-secondary: calc(var(--hue) + 180);
+  --chroma: 0.00;
+  --chroma-bg: calc(var(--chroma) * 0.5);
+  --chroma-text: min(var(--chroma), 0.1);
+  --chroma-action: max(var(--chroma), 0.1);
+  --chroma-alert: max(var(--chroma), 0.05);
+
+
+  /* shadows */
+  /* Tailwind shadow-md for light mode */
+  --shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  --shadow-sm: 0 2px 4px -1px rgb(0 0 0 / 0.1), 0 1px 2px 0 rgb(0 0 0 / 0.1);
+  /* type */
+  --ff: "Manrope", sans-serif;
+  --h1: 700 1.5rem/1.2em var(--ff);
+  --h2: 700 1.25rem/1.2em var(--ff);
+  --h3: 700 1.125rem/1.4em var(--ff);
+  --h4: 700 1rem/1.6em var(--ff);
+  --p: 400 1rem/1.6em var(--ff);
+  --small: 400 0.75rem/1.8em var(--ff);
+
+  --bg-dark: oklch(0.92 var(--chroma-bg) var(--hue));
+  --bg: oklch(0.96 var(--chroma-bg) var(--hue));
+  --bg-light: oklch(1 var(--chroma-bg) var(--hue));
+  --gradient: linear-gradient(0deg, var(--bg) 97%, var(--bg-light));
+  --gradient-hover: linear-gradient(0deg, var(--bg), var(--bg-light));
+  --bg-problem-section: hsl(210, 30%, 12%);
+  /* text */
+  --text: oklch(0.15 var(--chroma) var(--hue));
+  --text-muted: oklch(0.4 var(--chroma) var(--hue));
+  /* border */
+  --highlight: oklch(1 var(--chroma) var(--hue));
+  --border: oklch(0.6 var(--chroma) var(--hue));
+  --border-muted: oklch(0.7 var(--chroma) var(--hue));
+  --border-card: solid 1px var(--bg);
+  /* action */
+  --primary: hsl(143 79 34);
+  --primary-hover: hsl(143 79 36);
+  --primary-hover-active: hsl(143 79 30);
+  --primary-muted: hsl(143 40 60);
+  --secondary: hsl(143 50 85);
+  --secondary-hover: hsl(143 50 82);
+  /* alert */
+  --danger: hsl(0 85 55);
+  --warning: hsl(35 95 50);
+  --success: hsl(145 65 42);
+  --info: hsl(210 90 50);
+
+  color: hsl(var(--text));
+  background-color: hsl(var(--bg));
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* DARK theme variables */
+[data-theme="dark"] {
+    /* bg */
+  --bg-dark: oklch(0.1 var(--chroma-bg) var(--hue));
+  --bg: oklch(0.15 var(--chroma-bg) var(--hue));
+  --bg-light: oklch(0.2 var(--chroma-bg) var(--hue));
+  --gradient: linear-gradient(0deg, var(--bg) 97%, var(--bg-light));
+  --gradient-hover: linear-gradient(0deg, var(--bg), var(--bg-light));
+  /* text */
+  --text: oklch(0.96 var(--chroma-text) var(--hue));
+  --text-muted: oklch(0.76 var(--chroma-text) var(--hue));
+  /* border */
+  --highlight: oklch(0.5 var(--chroma) var(--hue));
+  --border: oklch(0.4 var(--chroma) var(--hue));
+  --border-muted: oklch(0.3 var(--chroma) var(--hue));
+  --border-card: solid 1px var(--border-muted);
+  /* action */
+  --primary: hsl(135 60 55);
+  --secondary: oklch(0.76 var(--chroma-action) var(--hue-secondary));
+  /* alert */
+  --danger: hsl(0 90 68);
+  --warning: hsl(35 95 65);
+  --success: hsl(145 60 55);
+  --info: hsl(210 95 68);
+
+  /* In dark mode, use an inset white shadow */
+  --shadow: inset 0 2px 8px -2px rgb(255 255 255 / 0.18), inset 0 1px 2px 0 rgb(255 255 255 / 0.20);
+  --shadow-sm: inset 0 1px 2px -1px rgb(255 255 255 / 0.18), inset 0 1px 2px 0 rgb(255 255 255 / 0.20);   
+
+
+
+  color: hsl(var(--text));
+  background-color: hsl(var(--bg));
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+html,
+body,
+#root {
+  height: 100vh;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(0, 0, 0, 0.5) transparent;
+}
