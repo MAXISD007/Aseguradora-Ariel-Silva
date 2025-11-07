@@ -1,5 +1,21 @@
 @import "tailwindcss";
 
+@theme {
+  --color-primary: #222b54;
+  --color-primary-hover: #1c2446;
+  --color-primary-active: #323d6b;
+  --color-primary-muted: #152050;
+  --color-secondary: #3a519f;
+  --color-secondary-hover: #4960a8;
+  --color-tertiary: #bbd7eb;
+  --color-black: #1d1d1b;
+  --color-white: #edf1f6;
+  --color-danger: hsl(0 85 55);
+  --color-warning: hsl(35 95 50);
+  --color-success: hsl(145 65 42);
+  --color-info: hsl(210 90 50);
+}
+
 :root {
   --font-sans: "Inter", "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
   
@@ -44,9 +60,9 @@
   --border: oklch(0.6 var(--chroma) var(--hue));
   --border-muted: oklch(0.7 var(--chroma) var(--hue));
   --border-card: solid 1px var(--bg);
-  /* action */
+  /* action - mantener para CSS personalizado */
   --primary: #222b54;
-  --primary-hover: #1c2446;         /*primary-hover, primary-hover-active, primary-muted, las hice yo a ojo*/
+  --primary-hover: #1c2446;
   --primary-hover-active: #323d6b;
   --primary-muted: #152050; 
   --secondary: #3a519f;
