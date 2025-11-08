@@ -10,14 +10,17 @@
   --color-tertiary: #bbd7eb;
   --color-black: #1d1d1b;
   --color-white: #edf1f6;
+  --color-bg: #F6F3EE;
   --color-danger: hsl(0 85 55);
   --color-warning: hsl(35 95 50);
   --color-success: hsl(145 65 42);
   --color-info: hsl(210 90 50);
+  
+  --font-sans: "Nunito", system-ui, -apple-system, sans-serif;
 }
 
 :root {
-  --font-sans: "Inter", "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --font-sans: "Nunito", system-ui, -apple-system, sans-serif;
   
   font-family: var(--font-sans);
   line-height: 1.5;
