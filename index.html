@@ -12,6 +12,8 @@
   <body class="bg-bg">
     <section class="h-full"></section>
 
+    <!-- misión visión valores -->
+
     <section class="py-16 px-6 bg-bg">
       <div class="max-w-336 mx-auto">
         <div class="mb-12">
@@ -62,14 +64,13 @@
 
     <!-- nuestra historia -->
 
-    <section class="w-full my-10 gap-8 flex flex-col items-center justify-center md:flex-row md:p-15 lg:p-30">
-
-      <div class="text-[#01063B] w-6/8 justify-center flex flex-col md:mr-10 lg:mr-15">
+    <section class="w-full my-10 gap-8 md:gap-32 flex flex-col items-center justify-center md:flex-row md:p-15 lg:p-30">
+      <div class="text-[#01063B] max-w-336 w-7/8 justify-center flex flex-col">
         <h2 class="mb-9 text-4xl text-center md:text-left md:text-5xl">
           <span class="font-medium">Nuestra</span>
           <span class="font-extrabold italic">historia</span>
         </h2>
-        <p class="text-md max-sm:text-sm text-pretty">
+        <p class="text-md max-sm:text-sm text-justify">
           <span class="font-light">Todo comenzó con una convicción simple, pero poderosa: las personas necesitan algo más que un seguro. Necesitan sentirse acompañadas. </span><span class="font-bold">Con más de 45 años de experiencia en el sistema financiero y asegurador</span><span class="font-light">, en 2009 decidimos dar un paso firme: transformar ese recorrido en una empresa familiar con propósito, construida sobre valores sólidos, trabajo profesional y un fuerte compromiso con la gente. </span><span class="font-bold">Así nació Ariel Silva Asesores de Seguros SRL, un proyecto de vida fundado por Ariel, Jorge y Claudia Silva</span><span class="font-light">, que combina familia, experiencia, formación y energía para crecer. Desde nuestros inicios, nacimos con el respaldo de grandes compañías líderes del sector, construyendo relaciones basadas en la confianza, la cercanía y la excelencia, que nos posicionan como referentes del mercado asegurador en la región. Hoy, ya más de 75 productores asesores comparten este camino. Contamos con Casa Central y oficina comercial en Corrientes Capital, sucursales en Goya y Resistencia, aliados en Formosa, y nuevos pasos hacia la expansión nacional. </span><span class="font-bold">Lo que más nos enorgullece es lo que nunca cambiamos: </span><span class="font-light">la forma en que miramos a cada cliente, escuchamos sus necesidades y trabajamos para proteger lo que más valora. <br>Nuestro sueño: seguir creciendo, porque cuando el propósito es proteger, el futuro siempre está asegurado.</span>
         </p>
       </div>
@@ -116,7 +117,61 @@
       </div>
     </section>
 
-    <section class="h-full"></section>
+    <section class="h-1/4"></section>
+
+    <!-- tipos de seguros -->
+
+    <section class="max-w-336 mx-auto px-6">
+      <div class="flex flex-col lg:flex-row justify-center items-center gap-8 lg:gap-16 mb-12">
+        <h2 class="text-3xl md:text-4xl lg:text-5xl text-primary text-center lg:text-left max-w-sm lg:max-w-lg">
+          <span class="text-secondary font-extrabold italic">¿Qué tipo de seguro</span> estás buscando?
+        </h2>
+        
+        <div class="flex">
+          <div class="relative bg-[#5A5A5A] rounded-full shadow-lg overflow-hidden">
+            <div id="toggleSlider" class="absolute top-0 left-0 h-full bg-white rounded-full transition-all duration-300 ease-in-out shadow-md"></div>
+            
+            <!-- Botones -->
+            <div class="relative flex">
+              <button id="toggleFamilia" class="toggle-btn active-toggle">
+                Para vos y tu Familia
+              </button>
+              <button id="toggleEmpresa" class="toggle-btn inactive-toggle">
+                Para tu Negocio o Empresa
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="mt-20">
+        <div id="gridFamilia" class="grid grid-cols-2 md:grid-cols-5 gap-4">
+            <div class="bg-white rounded-lg shadow p-6 h-32 flex items-center justify-center text-center font-medium text-gray-700">Automotor</div>
+            <div class="bg-white rounded-lg shadow p-6 h-32 flex items-center justify-center text-center font-medium text-gray-700">Hogar</div>
+            <div class="bg-white rounded-lg shadow p-6 h-32 flex items-center justify-center text-center font-medium text-gray-700">Embarcaciones</div>
+            <div class="bg-white rounded-lg shadow p-6 h-32 flex items-center justify-center text-center font-medium text-gray-700">Vida Individual</div>
+            <div class="bg-white rounded-lg shadow p-6 h-32 flex items-center justify-center text-center font-medium text-gray-700">Vida con Capitalización</div>
+            <div class="bg-white rounded-lg shadow p-6 h-32 flex items-center justify-center text-center font-medium text-gray-700">Accidentes Personales</div>
+            <div class="bg-white rounded-lg shadow p-6 h-32 flex items-center justify-center text-center font-medium text-gray-700">Seguro de Salud</div>
+            <div class="bg-white rounded-lg shadow p-6 h-32 flex items-center justify-center text-center font-medium text-gray-700">Praxis Médica</div>
+            <div class="bg-white rounded-lg shadow p-6 h-32 flex items-center justify-center text-center font-medium text-gray-700">R.C. Profesional</div>
+            <div class="bg-white rounded-lg shadow p-6 h-32 flex items-center justify-center text-center font-medium text-gray-700">R.C. Comprensiva</div>
+        </div>
+
+        <div id="gridEmpresa" class="grid grid-cols-2 md:grid-cols-5 gap-4 hidden">
+            <div class="bg-white rounded-lg shadow p-6 h-32 flex items-center justify-center text-center font-medium text-gray-700">ART</div>
+            <div class="bg-white rounded-lg shadow p-6 h-32 flex items-center justify-center text-center font-medium text-gray-700">Flota de Vehículos</div>
+            <div class="bg-white rounded-lg shadow p-6 h-32 flex items-center justify-center text-center font-medium text-gray-700">Seguro Técnico</div>
+            <div class="bg-white rounded-lg shadow p-6 h-32 flex items-center justify-center text-center font-medium text-gray-700">Comercio</div>
+            <div class="bg-white rounded-lg shadow p-6 h-32 flex items-center justify-center text-center font-medium text-gray-700">Transporte</div>
+        </div>
+
+      </div>
+
+    </section>
+
+    <section class="h-1/2"></section>
     
     <script type="module" src="/src/main.js"></script>
   </body>
