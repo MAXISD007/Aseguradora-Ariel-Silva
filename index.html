@@ -145,34 +145,40 @@
       </div>
 
 
-      <div class="mt-20">
-        <div id="gridFamilia" class="grid grid-cols-2 md:grid-cols-5 gap-4">
-            <div class="bg-white rounded-lg shadow p-6 h-32 flex items-center justify-center text-center font-medium text-gray-700">Automotor</div>
-            <div class="bg-white rounded-lg shadow p-6 h-32 flex items-center justify-center text-center font-medium text-gray-700">Hogar</div>
-            <div class="bg-white rounded-lg shadow p-6 h-32 flex items-center justify-center text-center font-medium text-gray-700">Embarcaciones</div>
-            <div class="bg-white rounded-lg shadow p-6 h-32 flex items-center justify-center text-center font-medium text-gray-700">Vida Individual</div>
-            <div class="bg-white rounded-lg shadow p-6 h-32 flex items-center justify-center text-center font-medium text-gray-700">Vida con Capitalización</div>
-            <div class="bg-white rounded-lg shadow p-6 h-32 flex items-center justify-center text-center font-medium text-gray-700">Accidentes Personales</div>
-            <div class="bg-white rounded-lg shadow p-6 h-32 flex items-center justify-center text-center font-medium text-gray-700">Seguro de Salud</div>
-            <div class="bg-white rounded-lg shadow p-6 h-32 flex items-center justify-center text-center font-medium text-gray-700">Praxis Médica</div>
-            <div class="bg-white rounded-lg shadow p-6 h-32 flex items-center justify-center text-center font-medium text-gray-700">R.C. Profesional</div>
-            <div class="bg-white rounded-lg shadow p-6 h-32 flex items-center justify-center text-center font-medium text-gray-700">R.C. Comprensiva</div>
-        </div>
+      <div id="gridContainer" class="mt-20 overflow-hidden">
+  
+        <div id="gridTrack" class="flex transition-transform duration-500 ease-in-out">
+          
+          <div id="gridFamilia" class="grid grid-cols-2 max-w-336 px-12 md:grid-cols-5 gap-4 w-full shrink-0">
+              <div class="bg-white rounded-lg shadow p-6 h-32 flex items-center justify-center text-center font-medium text-gray-700"><i data-lucide="car"></i>Automotor</div>
+              <div class="bg-white rounded-lg shadow p-6 h-32 flex items-center justify-center text-center font-medium text-gray-700"><i data-lucide="home"></i>Hogar</div>
+              <div class="bg-white rounded-lg shadow p-6 h-32 flex items-center justify-center text-center font-medium text-gray-700"><i data-lucide="boat"></i>Embarcaciones</div>
+              <div class="bg-white rounded-lg shadow p-6 h-32 flex items-center justify-center text-center font-medium text-gray-700"><i data-lucide="user"></i>Vida Individual</div>
+              <div class="bg-white rounded-lg shadow p-6 h-32 flex items-center justify-center text-center font-medium text-gray-700"><i data-lucide="piggy-bank"></i>Vida con Capitalización</div>
+              <div class="bg-white rounded-lg shadow p-6 h-32 flex items-center justify-center text-center font-medium text-gray-700"><i data-lucide="shield"></i>Accidentes Personales</div>
+              <div class="bg-white rounded-lg shadow p-6 h-32 flex items-center justify-center text-center font-medium text-gray-700"><i data-lucide="heart"></i>Seguro de Salud</div>
+              <div class="bg-white rounded-lg shadow p-6 h-32 flex items-center justify-center text-center font-medium text-gray-700"><i data-lucide="stethoscope"></i>Praxis Médica</div>
+              <div class="bg-white rounded-lg shadow p-6 h-32 flex items-center justify-center text-center font-medium text-gray-700"><i data-lucide="user"></i>R.C. Profesional</div>
+              <div class="bg-white rounded-lg shadow p-6 h-32 flex items-center justify-center text-center font-medium text-gray-700"><i data-lucide="shield"></i>R.C. Comprensiva</div>
+          </div>
 
-        <div id="gridEmpresa" class="grid grid-cols-2 md:grid-cols-5 gap-4 hidden">
-            <div class="bg-white rounded-lg shadow p-6 h-32 flex items-center justify-center text-center font-medium text-gray-700">ART</div>
-            <div class="bg-white rounded-lg shadow p-6 h-32 flex items-center justify-center text-center font-medium text-gray-700">Flota de Vehículos</div>
-            <div class="bg-white rounded-lg shadow p-6 h-32 flex items-center justify-center text-center font-medium text-gray-700">Seguro Técnico</div>
-            <div class="bg-white rounded-lg shadow p-6 h-32 flex items-center justify-center text-center font-medium text-gray-700">Comercio</div>
-            <div class="bg-white rounded-lg shadow p-6 h-32 flex items-center justify-center text-center font-medium text-gray-700">Transporte</div>
-        </div>
+          <div id="gridEmpresa" class="grid grid-cols-2 max-w-336 px-12 md:grid-cols-5 gap-4 w-full shrink-0">
+              <div class="bg-white rounded-lg shadow p-6 h-32 flex items-center justify-center text-center font-medium text-gray-700"><i data-lucide="user"></i>ART</div>
+              <div class="bg-white rounded-lg shadow p-6 h-32 flex items-center justify-center text-center font-medium text-gray-700"><i data-lucide="car"></i>Flota de Vehículos</div>
+              <div class="bg-white rounded-lg shadow p-6 h-32 flex items-center justify-center text-center font-medium text-gray-700"><i data-lucide="shield"></i>Seguro Técnico</div>
+              <div class="bg-white rounded-lg shadow p-6 h-32 flex items-center justify-center text-center font-medium text-gray-700"><i data-lucide="home"></i>Comercio</div>
+              <div class="bg-white rounded-lg shadow p-6 h-32 flex items-center justify-center text-center font-medium text-gray-700"><i data-lucide="boat"></i>Transporte</div>
+          </div>
 
+        </div>
       </div>
 
     </section>
 
     <section class="h-1/2"></section>
     
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>lucide.createIcons();</script>
     <script type="module" src="/src/main.js"></script>
   </body>
 </html>

@@ -3,8 +3,7 @@ import './style.css'
 const toggleFamilia = document.getElementById('toggleFamilia');
 const toggleEmpresa = document.getElementById('toggleEmpresa');
 const toggleSlider = document.getElementById('toggleSlider');
-const gridFamilia = document.getElementById('gridFamilia');
-const gridEmpresa = document.getElementById('gridEmpresa');
+const gridTrack = document.getElementById('gridTrack');
 
 const PIXEL_OFFSET = 2;
 
@@ -28,32 +27,30 @@ function updateSliderPosition(activeButton) {
 // --- Event Listeners para los Clicks ---
 
 toggleFamilia.addEventListener('click', () => {
-    // 1. Mover el slider al botón "Familia"
+    // 1. Mover el slider (esto queda igual)
     updateSliderPosition(toggleFamilia);
     
-    // 2. Cambiar clases de los botones
+    // 2. Cambiar clases de los botones (esto queda igual)
     toggleFamilia.classList.replace('inactive-toggle', 'active-toggle');
     toggleEmpresa.classList.replace('active-toggle', 'inactive-toggle');
 
-    // 3. Mostrar/ocultar grids
-    if (gridFamilia && gridEmpresa) { // Comprobamos que existan
-        gridFamilia.classList.remove('hidden');
-        gridEmpresa.classList.add('hidden');
+    // 3. ¡CAMBIO AQUÍ! Mover el track de grillas a la posición 0
+    if (gridTrack) {
+        gridTrack.style.transform = 'translateX(0%)';
     }
 });
 
 toggleEmpresa.addEventListener('click', () => {
-    // 1. Mover el slider al botón "Empresa"
+    // 1. Mover el slider (esto queda igual)
     updateSliderPosition(toggleEmpresa);
     
-    // 2. Cambiar clases de los botones
+    // 2. Cambiar clases de los botones (esto queda igual)
     toggleEmpresa.classList.replace('inactive-toggle', 'active-toggle');
     toggleFamilia.classList.replace('active-toggle', 'inactive-toggle');
 
-    // 3. Mostrar/ocultar grids
-    if (gridFamilia && gridEmpresa) { // Comprobamos que existan
-        gridEmpresa.classList.remove('hidden');
-        gridFamilia.classList.add('hidden');
+    // 3. ¡CAMBIO AQUÍ! Mover el track de grillas a la posición -100%
+    if (gridTrack) {
+        gridTrack.style.transform = 'translateX(-100%)';
     }
 });
 
