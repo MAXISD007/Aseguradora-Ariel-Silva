@@ -60,6 +60,23 @@ document.addEventListener('DOMContentLoaded', () => {
     setTimeout(() => {
         updateContainerHeight(gridFamilia);
     }, 100);
+
+    const cards = document.querySelectorAll('.clickable-card');
+    cards.forEach(card => {
+        card.addEventListener('click', () => {
+            const front = card.querySelector('.card-front');
+            const back = card.querySelector('.card-back');
+
+            card.classList.toggle('bg-white');
+            card.classList.toggle('bg-secondary'); 
+            card.classList.toggle('text-secondary');
+            card.classList.toggle('text-white');
+            front.classList.toggle('hidden');
+            front.classList.toggle('flex'); 
+            back.classList.toggle('hidden');
+            back.classList.toggle('flex'); 
+        });
+    });
 });
 
 
