@@ -1,30 +1,654 @@
 <!doctype html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <title>Aseguradora Ariel Silva</title>
   </head>
-  <body class="bg-tertiary">
-    <div id="app">
-    <h1>Proyecto Aseguradora Ariel Silva</h1>
-    <h2>Navegación del Proyecto:</h2>
-    <ul>
-      <li>
-        <a href="/index(gonza).html">Ver la página de gonza</a>
-      </li>
-      <li>
-        <a href="/index(maxi).html">Ver la página de Maxi</a>
-      </li>
-      <li>
-        <a href="/index(nico).html">Ver la página de nico</a>
-      </li>
-      <li>
-        <a href="/index(principal).html">Ver la página Principal</a>
-      </li>
-    </ul>
-  </div>
+  <body class="bg-bg">
+    <section class="h-full"></section>
+
+    <!-- misión visión valores -->
+
+    <section class="py-16 px-6 bg-bg">
+      <div class="max-w-336 mx-auto">
+        <div class="mb-12">
+          <h2 class="text-4xl md:text-5xl text-center mb-6 text-secondary font-medium"><span class="font-extrabold">¡Somos el broker líder</span> en la región del NEA!</h2>
+          <div class="w-74 h-1.5 bg-secondary mx-auto"></div>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 p-4 cursor-default">
+          <div class="bg-[rgba(186,214,234,0.17)] hover:bg-[rgba(186,214,234,0.32)] transition-colors duration-200 rounded-3xl p-8 shadow-md">
+            <div class="mb-6">
+              <img src="/items/Mision.svg" alt="Misión" class="w-21 h-21 text-secondary" />
+            </div>
+            <h3 class="text-3xl font-extrabold text-secondary">MISIÓN</h3>
+            <div class="w-4/5 h-px bg-secondary mb-4"></div>
+            <p class="text-gray-700 text-md leading-relaxed text-justify">
+              Nuestra misión es innovación constante, brindando soluciones ágiles, precisas y confiables. Nuestro compromiso es anticiparnos a las necesidades del mercado para proteger lo que más importa: 
+              <span class="font-bold">la tranquilidad de nuestros clientes.</span>
+            </p>
+          </div>
+
+          <div class="bg-[rgba(186,214,234,0.17)] hover:bg-[rgba(186,214,234,0.32)] transition-colors duration-200 rounded-3xl p-8 shadow-md">
+            <div class="mb-6">
+              <img src="/items/Vision.svg" alt="Visión" class="w-21 h-21 text-secondary" />
+            </div>
+            <h3 class="text-3xl font-extrabold text-secondary">VISIÓN</h3>
+            <div class="w-4/5 h-px bg-secondary mb-4"></div>
+            <p class="text-gray-700 text-md leading-relaxed text-justify">
+              <span class="font-bold">Nuestra visión es ser los asesores de seguros de referencia en el NEA</span>, reconocidos por brindar una experiencia centrada y profesional, donde cada cliente se sienta escuchado, protegido y valorado. Aspiramos a construir relaciones duraderas basadas en el compromiso humano, la excelencia en el servicio y soluciones que acompañen la vida y el crecimiento de nuestra comunidad.
+            </p>
+          </div>
+
+          <div class="bg-[rgba(186,214,234,0.17)] hover:bg-[rgba(186,214,234,0.32)] transition-colors duration-200 rounded-3xl p-8 shadow-md">
+            <div class="mb-6">
+              <img src="/items/Valores.svg" alt="Valores" class="w-21 h-21 text-secondary" />
+            </div>
+            <h3 class="text-3xl font-extrabold text-secondary">VALORES</h3>
+            <div class="w-4/5 h-px bg-secondary mb-4"></div>
+            <div class="text-gray-700 text-md">
+              <p><span class="font-bold">Compromiso:</span> Caminamos junto a nuestros asegurados en cada etapa.</p>
+              <p><span class="font-bold">Integridad:</span> Gestionamos tu seguro con compromiso.</p>
+              <p><span class="font-bold">Innovación:</span> Evolucionamos para anticiparnos a los desafíos del futuro.</p>
+              <p><span class="font-bold">Empatía:</span> Entendemos tus necesidades y te ayudamos a encontrar el seguro que mejor se adapte a vos.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- nuestra historia -->
+
+    <section class="w-full my-10 gap-8 md:gap-32 flex flex-col items-center justify-center md:flex-row md:p-15 lg:p-30">
+      <div class="text-[#01063B] max-w-336 w-7/8 justify-center flex flex-col">
+        <h2 class="mb-9 text-4xl text-center md:text-left md:text-5xl">
+          <span class="font-medium">Nuestra</span>
+          <span class="font-extrabold italic">historia</span>
+        </h2>
+        <p class="text-md max-sm:text-sm text-justify">
+          <span class="font-light">Todo comenzó con una convicción simple, pero poderosa: las personas necesitan algo más que un seguro. Necesitan sentirse acompañadas. </span><span class="font-bold">Con más de 45 años de experiencia en el sistema financiero y asegurador</span><span class="font-light">, en 2009 decidimos dar un paso firme: transformar ese recorrido en una empresa familiar con propósito, construida sobre valores sólidos, trabajo profesional y un fuerte compromiso con la gente. </span><span class="font-bold">Así nació Ariel Silva Asesores de Seguros SRL, un proyecto de vida fundado por Ariel, Jorge y Claudia Silva</span><span class="font-light">, que combina familia, experiencia, formación y energía para crecer. Desde nuestros inicios, nacimos con el respaldo de grandes compañías líderes del sector, construyendo relaciones basadas en la confianza, la cercanía y la excelencia, que nos posicionan como referentes del mercado asegurador en la región. Hoy, ya más de 75 productores asesores comparten este camino. Contamos con Casa Central y oficina comercial en Corrientes Capital, sucursales en Goya y Resistencia, aliados en Formosa, y nuevos pasos hacia la expansión nacional. </span><span class="font-bold">Lo que más nos enorgullece es lo que nunca cambiamos: </span><span class="font-light">la forma en que miramos a cada cliente, escuchamos sus necesidades y trabajamos para proteger lo que más valora. <br>Nuestro sueño: seguir creciendo, porque cuando el propósito es proteger, el futuro siempre está asegurado.</span>
+        </p>
+      </div>
+
+      <img src="/items/nuestraHistoria.svg" alt="" class="size-6/8 sm:size-1/2 md:size-7/16">
+
+    </section>
+
+    <!-- mapa -->
+
+    <section class="bg-[#D0D3DE] rounded-[4rem] md:rounded-[8rem] shadow-xl px-8 py-12 md:px-20 md:py-16 lg:px-30 lg:py-20 flex flex-col-reverse lg:flex-row justify-around gap-8 lg:gap-12 items-center">
+
+      <div class="bg-bg px-12 py-8 md:px-20 md:py-10 lg:px-32 lg:py-12 rounded-4xl md:rounded-[3rem] flex justify-center items-center shadow-lg shrink-0 w-full lg:w-auto">
+        <img src="/items/mapaArgentina.svg" alt="Mapa de sucursales" class="w-36 md:w-52 lg:w-60 h-auto">
+      </div>
+
+      <div class="flex flex-col flex-1 w-full gap-4 lg:gap-8 lg:max-w-xl">
+        <h2 class="text-3xl md:text-4xl lg:text-5xl text-[#01063B] text-center lg:text-left">
+          ¡Seguimos <span class="italic font-extrabold">creciendo!</span>
+        </h2>
+
+        <div class="mt-2 md:mt-8 flex flex-col gap-4 md:gap-6">
+          <div>
+            <h3 class="text-xl md:text-2xl font-extrabold text-[#01063B]">Sucursal</h3>
+            <p class="text-xl md:text-2xl font-extrabold text-[#01063B]">Goya - Corrientes</p>
+            <p class="text-xs md:text-sm text-secondary mt-1">Belgrano 1167</p>
+            <p class="text-xs md:text-sm text-secondary">Whatsapp: 3777412788</p>
+          </div>
+          <div class="w-full h-0.5 bg-secondary"></div>
+          <div>
+            <h3 class="text-xl md:text-2xl font-extrabold text-[#01063B]">Sucursal</h3>
+            <p class="text-xl md:text-2xl font-extrabold text-[#01063B]">Resistencia - Chaco</p>
+            <p class="text-xs md:text-sm font-medium text-secondary mt-1">Av. Paraguay 157</p>
+            <p class="text-xs md:text-sm text-secondary">Whatsapp: 3624919099</p>
+          </div>
+          <div class="w-full h-0.5 bg-secondary"></div>
+          <div>
+            <h3 class="text-xl md:text-2xl font-extrabold text-[#01063B]">Sucursal</h3>
+            <p class="text-xl md:text-2xl font-extrabold text-[#01063B]">Palermo - Buenos Aires</p>
+            <p class="text-xs md:text-sm text-secondary mt-1">Beruti 3450 Celular</p>
+            <p class="text-xs md:text-sm text-secondary">Whatsapp: 112169940</p>
+          </div>
+        </div> 
+      </div>
+    </section>
+
+    <!-- tipos de seguros -->
+
+    <section class="max-w-336 mx-auto px-6 py-28">
+      <div class="flex flex-col lg:flex-row justify-center items-center gap-8 lg:gap-16 mb-12">
+        <h2 class="text-3xl md:text-4xl lg:text-5xl text-primary text-center max-w-sm lg:max-w-lg">
+          <span class="text-secondary font-extrabold italic">¿Qué tipo de seguro</span> estás buscando?
+        </h2>
+        
+        <div class="flex">
+          <div class="relative bg-[#5A5A5A] rounded-full shadow-lg overflow-hidden">
+            <div id="toggleSlider" class="absolute top-0 left-0 h-full bg-white rounded-full transition-all duration-300 ease-in-out shadow-md"></div>
+            
+            <!-- Botones -->
+            <div class="relative flex">
+              <button id="toggleFamilia" class="toggle-btn active-toggle">
+                Para vos y tu Familia
+              </button>
+              <button id="toggleEmpresa" class="toggle-btn inactive-toggle">
+                Para tu Negocio o Empresa
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <div id="gridContainer" class="overflow-hidden px-2 md:px-8 py-8 transition-[height] duration-500 ease-in-out">
+  
+        <div id="gridTrack" class="flex items-start transition-transform duration-500 ease-in-out">
+          
+          <div id="gridFamilia" class="grid grid-cols-[repeat(auto-fit,minmax(120px,1fr))] md:grid-cols-[repeat(auto-fit,minmax(180px,1fr))] auto-rows-[140px] md:auto-rows-[200px] max-w-336 px-6 md:px-12 gap-4 md:gap-8 w-full shrink-0">
+              <div class="clickable-card h-full bg-white text-secondary rounded-2xl md:rounded-4xl shadow-md drop-shadow-md cursor-pointer transition-all duration-300">
+                <div class="card-front p-3 md:p-6 flex flex-col justify-center text-center font-medium h-full">
+                  <div class="flex items-end justify-center h-12 md:h-24">
+                    <i class="bi bi-car-front-fill text-5xl md:text-7xl"></i>
+                  </div>
+                  <span class="font-bold text-sm md:text-xl mt-2 md:mt-3">Automotor - Motovehículo</span>
+                </div>
+                
+                <div class="card-back p-3 md:p-6 hidden flex-col justify-center text-left h-full">
+                  <h4 class="font-bold text-sm md:text-xl mb-2">Automotor</h4>
+                  <p class="text-xs md:text-sm">
+                    Protección total para tu vehículo con asistencia 24/7.
+                  </p>
+                </div>
+                
+              </div>
+
+              <div class="clickable-card h-full bg-white text-secondary rounded-2xl md:rounded-4xl shadow-md drop-shadow-md cursor-pointer transition-all duration-300">
+                <div class="card-front p-3 md:p-6 flex flex-col justify-center text-center font-medium h-full">
+                  <div class="flex items-end justify-center h-12 md:h-24">
+                    <i class="bi bi-house-door-fill text-5xl md:text-7xl"></i>
+                  </div>
+                  <span class="font-bold text-sm md:text-xl mt-2 md:mt-3">Hogar</span>
+                </div>
+                
+                <div class="card-back p-3 md:p-6 hidden flex-col justify-center text-left h-full">
+                  <h4 class="font-bold text-sm md:text-xl mb-2">Hogar</h4>
+                  <p class="text-xs md:text-sm">
+                    Protegemos tu vivienda y tus bienes para que puedas estar tranquilo tanto dentro como fuera de tu casa.
+                  </p>
+                </div>
+              </div>
+
+              <div class="clickable-card h-full bg-white text-secondary rounded-2xl md:rounded-4xl shadow-md drop-shadow-md cursor-pointer transition-all duration-300">
+                <div class="card-front p-3 md:p-6 flex flex-col justify-center text-center font-medium h-full">
+                  <div class="flex items-end justify-center h-12 md:h-24">
+                    <i class="bi bi-suitcase2-fill text-5xl md:text-7xl"></i>
+                  </div>
+                  <span class="font-bold text-sm md:text-xl mt-2 md:mt-3">Embarcaciones de Placer</span>
+                </div>
+                
+                <div class="card-back p-3 md:p-6 hidden flex-col justify-center text-left h-full">
+                  <h4 class="font-bold text-sm md:text-xl mb-2">Embarcaciones de Placer</h4>
+                  <p class="text-xs md:text-sm">
+                    Disfruta  de tu navegación con la tranquilidad de saber que siempre estás protegido.
+                  </p>
+                </div>
+              </div>
+
+              <div class="clickable-card h-full bg-white text-secondary rounded-2xl md:rounded-4xl shadow-md drop-shadow-md cursor-pointer transition-all duration-300">
+                <div class="card-front p-3 md:p-6 flex flex-col justify-center text-center font-medium h-full">
+                  <div class="flex items-end justify-center h-12 md:h-24">
+                    <i class="bi bi-person-fill text-5xl md:text-7xl"></i>
+                  </div>
+                  <span class="font-bold text-sm md:text-xl mt-2 md:mt-3">Vida Individual</span>
+                </div>
+                
+                <div class="card-back p-3 md:p-6 hidden flex-col justify-center text-left h-full">
+                  <h4 class="font-bold text-sm md:text-xl mb-2">Vida Individual</h4>
+                  <p class="text-xs md:text-sm">
+                    Respaldo económico para tu familia ante cualquier imprevisto.
+                  </p>
+                </div>
+              </div>
+
+              <div class="clickable-card h-full bg-white text-secondary rounded-2xl md:rounded-4xl shadow-md drop-shadow-md cursor-pointer transition-all duration-300">
+                <div class="card-front p-3 md:p-6 flex flex-col justify-center text-center font-medium h-full">
+                  <div class="flex items-end justify-center h-12 md:h-24">
+                    <i class="bi bi-piggy-bank-fill text-5xl md:text-7xl"></i>
+                  </div>
+                  <span class="font-bold text-sm md:text-xl mt-2 md:mt-3">Vida con Capitalización</span>
+                </div>
+                
+                <div class="card-back p-3 md:p-6 hidden flex-col justify-center text-left h-full">
+                  <h4 class="font-bold text-sm md:text-xl mb-2">Vida con Capitalización</h4>
+                  <p class="text-xs md:text-sm">
+                    Protección familiar previendo riesgos y proyectando el futuro.
+                  </p>
+                </div>
+              </div>
+
+              <div class="clickable-card h-full bg-white text-secondary rounded-2xl md:rounded-4xl shadow-md drop-shadow-md cursor-pointer transition-all duration-300">
+                <div class="card-front p-3 md:p-6 flex flex-col justify-center text-center font-medium h-full">
+                  <div class="flex items-end justify-center h-12 md:h-24">
+                    <i class="bi bi-shield-shaded text-5xl md:text-7xl"></i>
+                  </div>
+                  <span class="font-bold text-sm md:text-xl mt-2 md:mt-3">Accidentes Personales</span>
+                </div>
+                
+                <div class="card-back p-3 md:p-6 hidden flex-col justify-center text-left h-full">
+                  <h4 class="font-bold text-sm md:text-xl mb-2">Accidentes Personales</h4>
+                  <p class="text-xs md:text-sm">
+                    Cobertura ante perjuicios económicos por accidentes.
+                  </p>
+                </div>
+              </div>
+
+              <div class="clickable-card h-full bg-white text-secondary rounded-2xl md:rounded-4xl shadow-md drop-shadow-md cursor-pointer transition-all duration-300">
+                <div class="card-front p-3 md:p-6 flex flex-col justify-center text-center font-medium h-full">
+                  <div class="flex items-end justify-center h-12 md:h-24">
+                    <i class="bi bi-heart-fill text-5xl md:text-7xl"></i>
+                  </div>
+                  <span class="font-bold text-sm md:text-xl mt-2 md:mt-3">Seguro de Salud</span>
+                </div>
+                
+                <div class="card-back p-3 md:p-6 hidden flex-col justify-center text-left h-full">
+                  <h4 class="font-bold text-sm md:text-xl mb-2">Seguro de Salud</h4>
+                  <p class="text-xs md:text-sm">
+                    Verdadera protección ante accidentes y enfermedades.
+                  </p>
+                </div>
+              </div>
+
+              <div class="clickable-card h-full bg-white text-secondary rounded-2xl md:rounded-4xl shadow-md drop-shadow-md cursor-pointer transition-all duration-300">
+                <div class="card-front p-3 md:p-6 flex flex-col justify-center text-center font-medium h-full">
+                  <div class="flex items-end justify-center h-12 md:h-24">
+                    <i class="bi bi-heart-pulse-fill text-5xl md:text-7xl"></i>
+                  </div>
+                  <span class="font-bold text-sm md:text-xl mt-2 md:mt-3">Praxis Médica</span>
+                </div>
+                
+                <div class="card-back p-3 md:p-6 hidden flex-col justify-center text-left h-full">
+                  <h4 class="font-bold text-sm md:text-xl mb-2">Praxis Médica</h4>
+                  <p class="text-xs md:text-sm">
+                    Protección para profesionales e instituciones de salud.
+                  </p>
+                </div>
+              </div>
+
+              <div class="clickable-card h-full bg-white text-secondary rounded-2xl md:rounded-4xl shadow-md drop-shadow-md cursor-pointer transition-all duration-300">
+                <div class="card-front p-3 md:p-6 flex flex-col justify-center text-center font-medium h-full">
+                  <div class="flex items-end justify-center h-12 md:h-24">
+                    <i class="bi bi-person-fill text-5xl md:text-7xl"></i>
+                  </div>
+                  <span class="font-bold text-sm md:text-xl mt-2 md:mt-3">R.C. Profesional</span>
+                </div>
+                
+                <div class="card-back p-3 md:p-6 hidden flex-col justify-center text-left h-full">
+                  <h4 class="font-bold text-sm md:text-xl mb-2">R.C. Profesional</h4>
+                  <p class="text-xs md:text-sm">
+                    Cobertura completa ante daños a terceros profesionales.
+                  </p>
+                </div>
+              </div>
+
+              <div class="clickable-card h-full bg-white text-secondary rounded-2xl md:rounded-4xl shadow-md drop-shadow-md cursor-pointer transition-all duration-300">
+                <div class="card-front p-3 md:p-6 flex flex-col justify-center text-center font-medium h-full">
+                  <div class="flex items-end justify-center h-12 md:h-24">
+                    <i class="bi bi-shield-shaded text-5xl md:text-7xl"></i>
+                  </div>
+                  <span class="font-bold text-sm md:text-xl mt-2 md:mt-3">R.C. Comprensiva</span>
+                </div>
+                
+                <div class="card-back p-3 md:p-6 hidden flex-col justify-center text-left h-full">
+                  <h4 class="font-bold text-sm md:text-xl mb-2">R.C. Comprensiva</h4>
+                  <p class="text-xs md:text-sm">
+                    Protege tu patrimonio ante reclamos de terceros.
+                  </p>
+                </div>
+              </div>
+          </div>
+
+          <div id="gridEmpresa" class="grid grid-cols-[repeat(auto-fit,minmax(120px,1fr))] md:grid-cols-[repeat(auto-fit,minmax(180px,1fr))] auto-rows-[140px] md:auto-rows-[200px] max-w-336 px-6 md:px-12 gap-4 md:gap-8 w-full shrink-0">
+              <div class="clickable-card h-full bg-white text-secondary rounded-2xl md:rounded-4xl shadow-md drop-shadow-md cursor-pointer transition-all duration-300">
+                <div class="card-front p-3 md:p-6 flex flex-col justify-center text-center font-medium h-full">
+                  <div class="flex items-end justify-center h-12 md:h-24">
+                    <i class="bi bi-car-front-fill text-5xl md:text-7xl"></i>
+                  </div>
+                  <span class="font-bold text-sm md:text-xl mt-2 md:mt-3">Flota Automotor</span>
+                </div>
+                
+                <div class="card-back p-3 md:p-6 hidden flex-col justify-center text-left h-full">
+                  <h4 class="font-bold text-sm md:text-xl mb-2">Flota Automotor</h4>
+                  <p class="text-xs md:text-sm">
+                    El plan que se adapta a tu empresa con coberturas amplias.
+                  </p>
+                </div>
+              </div>
+
+              <div class="clickable-card h-full bg-white text-secondary rounded-2xl md:rounded-4xl shadow-md drop-shadow-md cursor-pointer transition-all duration-300">
+                <div class="card-front p-3 md:p-6 flex flex-col justify-center text-center font-medium h-full">
+                  <div class="flex items-end justify-center h-12 md:h-24">
+                    <i class="bi bi-building-fill text-5xl md:text-7xl"></i>
+                  </div>
+                  <span class="font-bold text-sm md:text-xl mt-2 md:mt-3">Integral de Comercio</span>
+                </div>
+                
+                <div class="card-back p-3 md:p-6 hidden flex-col justify-center text-left h-full">
+                  <h4 class="font-bold text-sm md:text-xl mb-2">Integral de Comercio</h4>
+                  <p class="text-xs md:text-sm">
+                    Resguardá tu patrimonio y capital de trabajo a medida.
+                  </p>
+                </div>
+              </div>
+
+              <div class="clickable-card h-full bg-white text-secondary rounded-2xl md:rounded-4xl shadow-md drop-shadow-md cursor-pointer transition-all duration-300">
+                <div class="card-front p-3 md:p-6 flex flex-col justify-center text-center font-medium h-full">
+                  <div class="flex items-end justify-center h-12 md:h-24">
+                    <i class="bi bi-shield-shaded text-5xl md:text-7xl"></i>
+                  </div>
+                  <span class="font-bold text-sm md:text-xl mt-2 md:mt-3">R.C. Comprensiva</span>
+                </div>
+                
+                <div class="card-back p-3 md:p-6 hidden flex-col justify-center text-left h-full">
+                  <h4 class="font-bold text-sm md:text-xl mb-2">R.C. Comprensiva</h4>
+                  <p class="text-xs md:text-sm">
+                    Protege tu patrimonio ante reclamos de terceros.
+                  </p>
+                </div>
+              </div>
+
+              <div class="clickable-card h-full bg-white text-secondary rounded-2xl md:rounded-4xl shadow-md drop-shadow-md cursor-pointer transition-all duration-300">
+                <div class="card-front p-3 md:p-6 flex flex-col justify-center text-center font-medium h-full">
+                  <div class="flex items-end justify-center h-12 md:h-24">
+                    <i class="bi bi-fire text-5xl md:text-7xl"></i>
+                  </div>
+                  <span class="font-bold text-sm md:text-xl mt-2 md:mt-3">Incendio</span>
+                </div>
+                
+                <div class="card-back p-3 md:p-6 hidden flex-col justify-center text-left h-full">
+                  <h4 class="font-bold text-sm md:text-xl mb-2">Incendio</h4>
+                  <p class="text-xs md:text-sm">
+                    Protege tus bienes materiales frente al fuego.
+                  </p>
+                </div>
+              </div>
+
+              <div class="clickable-card h-full bg-white text-secondary rounded-2xl md:rounded-4xl shadow-md drop-shadow-md cursor-pointer transition-all duration-300">
+                <div class="card-front p-3 md:p-6 flex flex-col justify-center text-center font-medium h-full">
+                  <div class="flex items-end justify-center h-12 md:h-24">
+                    <i class="bi bi-file-earmark-text-fill text-5xl md:text-7xl"></i>
+                  </div>
+                  <span class="font-bold text-sm md:text-xl mt-2 md:mt-3">Seguro de Caución</span>
+                </div>
+                
+                <div class="card-back p-3 md:p-6 hidden flex-col justify-center text-left h-full">
+                  <h4 class="font-bold text-sm md:text-xl mb-2">Seguro de Caución</h4>
+                  <p class="text-xs md:text-sm">
+                    Garantías para contratos públicos o privados.
+                  </p>
+                </div>
+              </div>
+
+              <div class="clickable-card h-full bg-white text-secondary rounded-2xl md:rounded-4xl shadow-md drop-shadow-md cursor-pointer transition-all duration-300">
+                <div class="card-front p-3 md:p-6 flex flex-col justify-center text-center font-medium h-full">
+                  <div class="flex items-end justify-center h-12 md:h-24">
+                    <i class="bi bi-heart-pulse-fill text-5xl md:text-7xl"></i>
+                  </div>
+                  <span class="font-bold text-sm md:text-xl mt-2 md:mt-3">Praxis Médica</span>
+                </div>
+                
+                <div class="card-back p-3 md:p-6 hidden flex-col justify-center text-left h-full">
+                  <h4 class="font-bold text-sm md:text-xl mb-2">Praxis Médica</h4>
+                  <p class="text-xs md:text-sm">
+                    Protección para profesionales e instituciones de salud.
+                  </p>
+                </div>
+              </div>
+
+              <div class="clickable-card h-full bg-white text-secondary rounded-2xl md:rounded-4xl shadow-md drop-shadow-md cursor-pointer transition-all duration-300">
+                <div class="card-front p-3 md:p-6 flex flex-col justify-center text-center font-medium h-full">
+                  <div class="flex items-end justify-center h-12 md:h-24">
+                    <i class="bi bi-person-fill text-5xl md:text-7xl"></i>
+                  </div>
+                  <span class="font-bold text-sm md:text-xl mt-2 md:mt-3">R.C. Profesional</span>
+                </div>
+                
+                <div class="card-back p-3 md:p-6 hidden flex-col justify-center text-left h-full">
+                  <h4 class="font-bold text-sm md:text-xl mb-2">R.C. Profesional</h4>
+                  <p class="text-xs md:text-sm">
+                    Cobertura completa ante daños a terceros profesionales.
+                  </p>
+                </div>
+              </div>
+
+              <div class="clickable-card h-full bg-white text-secondary rounded-2xl md:rounded-4xl shadow-md drop-shadow-md cursor-pointer transition-all duration-300">
+                <div class="card-front p-3 md:p-6 flex flex-col justify-center text-center font-medium h-full">
+                  <div class="flex items-end justify-center h-12 md:h-24">
+                    <i class="bi bi-wrench text-5xl md:text-7xl"></i>
+                  </div>
+                  <span class="font-bold text-sm md:text-xl mt-2 md:mt-3">Seguro Técnico</span>
+                </div>
+                
+                <div class="card-back p-3 md:p-6 hidden flex-col justify-center text-left h-full">
+                  <h4 class="font-bold text-sm md:text-xl mb-2">Seguro Técnico</h4>
+                  <p class="text-xs md:text-sm">
+                    Amparo ante pérdidas en bienes electrónicos y maquinarias.
+                  </p>
+                </div>
+              </div>
+
+              <div class="clickable-card h-full bg-white text-secondary rounded-2xl md:rounded-4xl shadow-md drop-shadow-md cursor-pointer transition-all duration-300">
+                <div class="card-front p-3 md:p-6 flex flex-col justify-center text-center font-medium h-full">
+                  <div class="flex items-end justify-center h-12 md:h-24">
+                    <i class="bi bi-truck-front-fill text-5xl md:text-7xl"></i>
+                  </div>
+                  <span class="font-bold text-sm md:text-xl mt-2 md:mt-3">Transporte de Mercaderías</span>
+                </div>
+                
+                <div class="card-back p-3 md:p-6 hidden flex-col justify-center text-left h-full">
+                  <h4 class="font-bold text-sm md:text-xl mb-2">Transporte de Mercaderías</h4>
+                  <p class="text-xs md:text-sm">
+                    Cobertura de riesgos durante el traslado de mercaderías.
+                  </p>
+                </div>
+              </div>
+
+              <div class="clickable-card h-full bg-white text-secondary rounded-2xl md:rounded-4xl shadow-md drop-shadow-md cursor-pointer transition-all duration-300">
+                <div class="card-front p-3 md:p-6 flex flex-col justify-center text-center font-medium h-full">
+                  <div class="flex items-end justify-center h-12 md:h-24">
+                    <i class="bi bi-person-raised-hand text-5xl md:text-7xl"></i>
+                  </div>
+                  <span class="font-bold text-sm md:text-xl mt-2 md:mt-3">Agrícola</span>
+                </div>
+                
+                <div class="card-back p-3 md:p-6 hidden flex-col justify-center text-left h-full">
+                  <h4 class="font-bold text-sm md:text-xl mb-2">Agrícola</h4>
+                  <p class="text-xs md:text-sm">
+                    Minimizá riesgos productivos en tu actividad rural.
+                  </p>
+                </div>
+              </div>
+
+              <div class="clickable-card h-full bg-white text-secondary rounded-2xl md:rounded-4xl shadow-md drop-shadow-md cursor-pointer transition-all duration-300">
+                <div class="card-front p-3 md:p-6 flex flex-col justify-center text-center font-medium h-full">
+                  <div class="flex items-end justify-center h-12 md:h-24">
+                    <i class="bi bi-airplane-fill text-5xl md:text-7xl"></i>
+                  </div>
+                  <span class="font-bold text-sm md:text-xl mt-2 md:mt-3">Aeronavegación</span>
+                </div>
+                
+                <div class="card-back p-3 md:p-6 hidden flex-col justify-center text-left h-full">
+                  <h4 class="font-bold text-sm md:text-xl mb-2">Aeronavegación</h4>
+                  <p class="text-xs md:text-sm">
+                    Tranquilidad ante daños en aeronaves, pasajeros y cargas.
+                  </p>
+                </div>
+              </div>
+
+              <div class="clickable-card h-full bg-white text-secondary rounded-2xl md:rounded-4xl shadow-md drop-shadow-md cursor-pointer transition-all duration-300">
+                <div class="card-front p-3 md:p-6 flex flex-col justify-center text-center font-medium h-full">
+                  <div class="flex items-end justify-center h-12 md:h-24">
+                    <i class="bi bi-suitcase-lg-fill text-5xl md:text-7xl"></i>
+                  </div>
+                  <span class="font-bold text-sm md:text-xl mt-2 md:mt-3">A.R.T.</span>
+                </div>
+                
+                <div class="card-back p-3 md:p-6 hidden flex-col justify-center text-left h-full">
+                  <h4 class="font-bold text-sm md:text-xl mb-2">A.R.T.</h4>
+                  <p class="text-xs md:text-sm">
+                    Prevención y atención de accidentes laborales obligatoria.
+                  </p>
+                </div>
+              </div>
+
+              <div class="clickable-card h-full bg-white text-secondary rounded-2xl md:rounded-4xl shadow-md drop-shadow-md cursor-pointer transition-all duration-300">
+                <div class="card-front p-3 md:p-6 flex flex-col justify-center text-center font-medium h-full">
+                  <div class="flex items-end justify-center h-12 md:h-24">
+                    <i class="bi bi-house-heart-fill text-5xl md:text-7xl"></i>
+                  </div>
+                  <span class="font-bold text-sm md:text-xl mt-2 md:mt-3">Seguro de Vida Obligatorio</span>
+                </div>
+                
+                <div class="card-back p-3 md:p-6 hidden flex-col justify-center text-left h-full">
+                  <h4 class="font-bold text-sm md:text-xl mb-2">Seguro de Vida Obligatorio</h4>
+                  <p class="text-xs md:text-sm">
+                    Cobertura obligatoria por muerte del trabajador.
+                  </p>
+                </div>
+              </div>
+
+              <div class="clickable-card h-full bg-white text-secondary rounded-2xl md:rounded-4xl shadow-md drop-shadow-md cursor-pointer transition-all duration-300">
+                <div class="card-front p-3 md:p-6 flex flex-col justify-center text-center font-medium h-full">
+                  <div class="flex items-end justify-center h-12 md:h-24">
+                    <i class="bi bi-file-earmark-text-fill text-5xl md:text-7xl"></i>
+                  </div>
+                  <span class="font-bold text-sm md:text-xl mt-2 md:mt-3">Convenio Peón Rural</span>
+                </div>
+                
+                <div class="card-back p-3 md:p-6 hidden flex-col justify-center text-left h-full">
+                  <h4 class="font-bold text-sm md:text-xl mb-2">Convenio Peón Rural</h4>
+                  <p class="text-xs md:text-sm">
+                    Respaldo según Ley 16.600 para peones rurales.
+                  </p>
+                </div>
+              </div>
+
+              <div class="clickable-card h-full bg-white text-secondary rounded-2xl md:rounded-4xl shadow-md drop-shadow-md cursor-pointer transition-all duration-300">
+                <div class="card-front p-3 md:p-6 flex flex-col justify-center text-center font-medium h-full">
+                  <div class="flex items-end justify-center h-12 md:h-24">
+                    <i class="bi bi-file-earmark-text-fill text-5xl md:text-7xl"></i>
+                  </div>
+                  <span class="font-bold text-sm md:text-xl mt-2 md:mt-3">Convenio Mercantil</span>
+                </div>
+                
+                <div class="card-back p-3 md:p-6 hidden flex-col justify-center text-left h-full">
+                  <h4 class="font-bold text-sm md:text-xl mb-2">Convenio Mercantil</h4>
+                  <p class="text-xs md:text-sm">
+                    Cumple con la Ley 130/75 para empleados de comercio.
+                  </p>
+                </div>
+              </div>
+
+              <div class="clickable-card h-full bg-white text-secondary rounded-2xl md:rounded-4xl shadow-md drop-shadow-md cursor-pointer transition-all duration-300">
+                <div class="card-front p-3 md:p-6 flex flex-col justify-center text-center font-medium h-full">
+                  <div class="flex items-end justify-center h-12 md:h-24">
+                    <i class="bi bi-suitcase-lg-fill text-5xl md:text-7xl"></i>
+                  </div>
+                  <span class="font-bold text-sm md:text-xl mt-2 md:mt-3">Ley de Contrato de Trabajo</span>
+                </div>
+                
+                <div class="card-back p-3 md:p-6 hidden flex-col justify-center text-left h-full">
+                  <h4 class="font-bold text-sm md:text-xl mb-2">Ley de Contrato de Trabajo</h4>
+                  <p class="text-xs md:text-sm">
+                    Protección complementaria por fallecimiento o invalidez.
+                  </p>
+                </div>
+              </div>
+
+              <div class="clickable-card h-full bg-white text-secondary rounded-2xl md:rounded-4xl shadow-md drop-shadow-md cursor-pointer transition-all duration-300">
+                <div class="card-front p-3 md:p-6 flex flex-col justify-center text-center font-medium h-full">
+                  <div class="flex items-end justify-center h-12 md:h-24">
+                    <i class="bi bi-heart-fill text-5xl md:text-7xl"></i>
+                  </div>
+                  <span class="font-bold text-sm md:text-xl mt-2 md:mt-3">Vida Colectivo</span>
+                </div>
+                
+                <div class="card-back p-3 md:p-6 hidden flex-col justify-center text-left h-full">
+                  <h4 class="font-bold text-sm md:text-xl mb-2">Vida Colectivo</h4>
+                  <p class="text-xs md:text-sm">
+                    Amplia protección para tus empleados a bajo costo.
+                  </p>
+                </div>
+              </div>
+
+              <div class="clickable-card h-full bg-white text-secondary rounded-2xl md:rounded-4xl shadow-md drop-shadow-md cursor-pointer transition-all duration-300">
+                <div class="card-front p-3 md:p-6 flex flex-col justify-center text-center font-medium h-full">
+                  <div class="flex items-end justify-center h-12 md:h-24">
+                    <i class="bi bi-file-person-fill text-5xl md:text-7xl"></i>
+                  </div>
+                  <span class="font-bold text-sm md:text-xl mt-2 md:mt-3">Sepelio</span>
+                </div>
+                
+                <div class="card-back p-3 md:p-6 hidden flex-col justify-center text-left h-full">
+                  <h4 class="font-bold text-sm md:text-xl mb-2">Sepelio</h4>
+                  <p class="text-xs md:text-sm">
+                    Seguro indemnizatorio ante la pérdida de un ser querido.
+                  </p>
+                </div>
+              </div>
+
+              <div class="clickable-card h-full bg-white text-secondary rounded-2xl md:rounded-4xl shadow-md drop-shadow-md cursor-pointer transition-all duration-300">
+                <div class="card-front p-3 md:p-6 flex flex-col justify-center text-center font-medium h-full">
+                  <div class="flex items-end justify-center h-12 md:h-24">
+                    <i class="bi bi-activity text-5xl md:text-7xl"></i>
+                  </div>
+                  <span class="font-bold text-sm md:text-xl mt-2 md:mt-3">Seguro de Salud</span>
+                </div>
+                
+                <div class="card-back p-3 md:p-6 hidden flex-col justify-center text-left h-full">
+                  <h4 class="font-bold text-sm md:text-xl mb-2">Seguro de Salud</h4>
+                  <p class="text-xs md:text-sm">
+                    Complementá la cobertura médica de tus empleados.
+                  </p>
+                </div>
+              </div>
+
+          </div>
+
+        </div>
+      </div>    
+    </section>
+
+    <!-- testimonios -->
+    <section class="bg-[url(/items/fondoExperiencias.png)] bg-cover py-16 px-6">
+      <div class="max-w-5xl mx-auto text-center text-white">
+        <div class="inline-block bg-[#01063B] text-bg md:text-lg font-black rounded-full shadow-sm px-6 md:px-8 py-1 md:py-2 mt-10 mb-10">
+          CLIENTES
+        </div>
+        
+        <div class="flex justify-center gap-4 text-bg mb-12">
+          <i class="bi bi-star-fill text-2xl md:text-3xl"></i>
+          <i class="bi bi-star-fill text-2xl md:text-3xl"></i>
+          <i class="bi bi-star-fill text-2xl md:text-3xl"></i>
+          <i class="bi bi-star-fill text-2xl md:text-3xl"></i>
+          <i class="bi bi-star-fill text-2xl md:text-3xl"></i>
+        </div>
+        
+        <div class="flex items-center justify-center">
+          <p id="testimonial-quote" class="text-2xl md:text-4xl font-bold transition-opacity duration-600 ease-in-out"></p>
+        </div>
+        
+        <p id="testimonial-author" class="text-lg mt-26 font-light transition-opacity duration-600 ease-in-out"></p>
+
+        <div class="w-60 h-0.5 bg-white/50 mx-auto my-6"></div>
+        
+      </div>
+    </section>
+
+    
     <script type="module" src="/src/main.js"></script>
   </body>
 </html>
