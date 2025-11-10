@@ -15,9 +15,12 @@
   --color-warning: hsl(35 95 50);
   --color-success: hsl(145 65 42);
   --color-info: hsl(210 90 50);
+
+  --breakpoint-xs: 30rem;
   
   --font-sans: "Nunito", system-ui, -apple-system, sans-serif;
 }
+
 
 :root {
   --font-sans: "Nunito", system-ui, -apple-system, sans-serif;
@@ -136,7 +139,7 @@ body,
 }
 
 .toggle-btn {
-  @apply py-2.5 px-6 transition-colors duration-300 cursor-pointer flex-1 text-center text-xs sm:text-sm md:text-base lg:text-xl whitespace-nowrap relative; 
+  @apply py-2.5 px-6 transition-colors duration-300 cursor-pointer flex-1 text-center text-xs xs:text-sm md:text-base lg:text-xl whitespace-nowrap relative; 
 }
 
 .active-toggle {
