@@ -94,6 +94,76 @@ window.addEventListener('resize', () => {
     updateContainerHeight(activeGrid);
 });
 
+// Cantidades
+
+function animateValue(element, start, end, duration) {
+    let startTimestamp = null;
+    element.style.opacity = '1'; // Mostrar el elemento cuando comienza la animación
+    const step = (timestamp) => {
+        if (!startTimestamp) startTimestamp = timestamp;
+        const progress = Math.min((timestamp - startTimestamp) / duration, 1);
+        const currentValue = Math.floor(progress * (end - start) + start);
+        // Usar toLocaleString con configuración específica para asegurar el formato correcto
+        element.textContent = "+" + currentValue.toLocaleString('es-ES', {
+            minimumFractionDigits: 0,
+            maximumFractionDigits: 0,
+            useGrouping: true
+        });
+        if (progress < 1) {
+            window.requestAnimationFrame(step);
+        }
+    };
+    window.requestAnimationFrame(step);
+}
+
+// Función para verificar si un elemento es visible en la ventana
+function isElementInViewport(el) {
+    const rect = el.getBoundingClientRect();
+    return (
+        rect.top < (window.innerHeight || document.documentElement.clientHeight) &&
+        rect.bottom >= 0 &&
+        rect.left < (window.innerWidth || document.documentElement.clientWidth) &&
+        rect.right >= 0
+    );
+}
+
+// Iniciar animación cuando los elementos sean visibles
+function handleScroll() {
+    const numberElements = document.querySelectorAll('.animate-number');
+    numberElements.forEach(element => {
+        if (!element.hasAnimated && isElementInViewport(element)) {
+            element.hasAnimated = true;
+            // Obtener el valor final del texto actual (eliminar el '+' y las comas)
+            const finalValue = parseInt(element.textContent.replace(/[+,]/g, ''));
+            animateValue(element, 0, finalValue, 3000); // 2000ms = 2 segundos de duración
+        }
+    });
+}
+
+// Crear un observador de intersección
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting && !entry.target.hasAnimated) {
+            const element = entry.target;
+            element.hasAnimated = true;
+            const finalValue = parseInt(element.textContent.replace(/[+,]/g, ''));
+            animateValue(element, 0, finalValue, 2000);
+            // Dejar de observar el elemento una vez que se ha animado
+            observer.unobserve(element);
+        }
+    });
+}, {
+    rootMargin: '50px', // Comienza a animar un poco antes de que el elemento sea visible
+    threshold: 0.1 // Comienza cuando al menos 10% del elemento es visible
+});
+
+// Observar todos los elementos con la clase animate-number
+document.querySelectorAll('.animate-number').forEach(element => {
+    element.style.opacity = '0'; // Ocultar el número inicial
+    element.style.transition = 'opacity 0.5s';
+    observer.observe(element);
+});
+
 // Experiencias
 
 const testimonials = [
