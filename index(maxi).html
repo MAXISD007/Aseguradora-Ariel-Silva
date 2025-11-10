@@ -1,33 +1,355 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
+   <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <title>Aseguradora Ariel Silva</title>
   </head>
   <body class="bg-(--white)">
-    <section>
-    <div class=" w-full h-45 bg-gradient-to-b from-white via-white to-transparent flex justify-center fixed">
-
-      <div class="flex justify-center w-2xl  ">
-          <img src="/public/logotipoHorizontal/logotipo1.svg" class="flex w-2xs pb-25">
-      </div>
-
-    </div>
-    <section>
     
     <section>
-            <div class="flex justify-center">
-
-                  <img src="/public/items/Fondo.svg" class="w-7/8 pt-35"
-
-
-            </div>
+      <div class=" flex flex-row justify-center w-full sm:h-20 md:h-24 bg-white flex justify-center fixed z-20 border-b  border-solid border-blue-700 shadow-md">
+        <button class=" s:text-4xs m:text-xs text-white mt-8 h-10 bg-[rgba(1,6,59,100)] hover:bg-[rgba(1,6,115,100)] transition-colors duration-200 rounded-3xl p-2 px-4 shadow-md font-bold" onclick="location.href='#nuestraHistoria'">Nuestra historia</button>
+        <button class=" text-white mt-8 h-10 bg-[rgba(1,6,59,100)] hover:bg-[rgba(1,6,115,100)] transition-colors duration-200 rounded-3xl p-2 px-4 shadow-md font-bold ml-5" onclick="location.href='#Mapa'">Encontranos</button>
+        <div id="Inicio" class="flex  justify-center w-1/2 max-w-7xl px-4 sm:px-6 lg:px-3  sm:mt-3 md:mt-4 lg:mb-1  ">
+          <img  src="/public/logotipoHorizontal/logotipo1.svg" alt="Logo Ariel Silva" class="w-32 sm:w-40 md:w-48 lg:w-60 pb-4 ">
+        </div>
+        <button class=" text-white mt-8 h-10 bg-[rgba(1,6,59,100)] hover:bg-[rgba(1,6,115,100)] transition-colors duration-200 rounded-3xl p-2 px-4 shadow-md font-bold ml-5" onclick="location.href='#Seguros'">Seguros</button>
+        <button class=" text-white mt-8 h-10 bg-[rgba(1,6,59,100)] hover:bg-[rgba(1,6,115,100)] transition-colors duration-200 rounded-3xl p-2 px-4 shadow-md font-bold ml-5" onclick="location.href='#nuestraHistoria'">Contactanos</button>
+      </div>
     </section>
 
+    <section class="flex ">
+            <div class="flex justify-center flex-col items-center relative w-full lg:top-1 z-1">
+              <img src="/public/items/Fondo.svg"
+                   class="relative z-1 w-full max-h-210 sm:w-full md:w-full lg:w-9/12 xl:w-10/12 pt-16 sm:pt-20 md:pt-24 lg:pt-28 object-cover lg:">
+              <img src="/public/items/textoasegurate.svg" alt="El mejor seguro es vivir tranquilo"
+                   class=" flex absolute top-115 left-45 inset-0 z-10 w-10/12 sm:w-8/12 md:w-6/12 lg:w-6/16  pointer-events-none ">
+              <button class=" w-30 h-10 text-white bg-[rgba(1,6,59,100)] hover:bg-[rgba(1,6,115,100)] transition-colors duration-800 absolute rounded-3xl top-150 left-45 z-10 " style="font-family: 'Nunito', sans-serif;">ASEGURATE. </button>
+            </div>
+          </section>
+             
 
-    
+
+
+
+
+
+
+
+
+
+
+
+    <!-- misión visión valores -->
+
+    <section class="py-16 px-6 bg-bg lg:mt-10">
+      <div class="max-w-336 mx-auto">
+        <div class="mb-12">
+          <h2 class="text-4xl md:text-5xl text-center mb-6 text-secondary font-medium"><span class="font-extrabold">¡Somos el broker líder</span> en la región del NEA!</h2>
+          <div class="w-74 h-1.5 bg-secondary mx-auto"></div>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 p-4 cursor-default">
+          <div class=" bg-[rgba(186,214,234,0.17)] hover:bg-[rgba(186,214,234,0.32)] transition-colors duration-200 rounded-3xl p-8 shadow-md">
+            <div class="mb-6">
+              <img src="/items/Mision.svg" alt="Misión" class="w-21 h-21 text-secondary" />
+            </div>
+            <h3 class=" text-3xl font-extrabold text-secondary">MISIÓN</h3>
+            <div class="w-4/5 h-px bg-secondary mb-4"></div>
+            <p class="text-gray-700 text-md leading-relaxed text-justify">
+              Nuestra misión es innovación constante, brindando soluciones ágiles, precisas y confiables. Nuestro compromiso es anticiparnos a las necesidades del mercado para proteger lo que más importa: 
+              <span class="font-bold">la tranquilidad de nuestros clientes.</span>
+            </p>
+          </div>
+
+          <div class="bg-[rgba(186,214,234,0.17)] hover:bg-[rgba(186,214,234,0.32)] transition-colors duration-200 rounded-3xl p-8 shadow-md">
+            <div class="mb-6">
+              <img src="/items/Vision.svg" alt="Visión" class="w-21 h-21 text-secondary" />
+            </div>
+            <h3 class="text-3xl font-extrabold text-secondary">VISIÓN</h3>
+            <div class="w-4/5 h-px bg-secondary mb-4"></div>
+            <p class="text-gray-700 text-md leading-relaxed text-justify">
+              <span class="font-bold">Nuestra visión es ser los asesores de seguros de referencia en el NEA</span>, reconocidos por brindar una experiencia centrada y profesional, donde cada cliente se sienta escuchado, protegido y valorado. Aspiramos a construir relaciones duraderas basadas en el compromiso humano, la excelencia en el servicio y soluciones que acompañen la vida y el crecimiento de nuestra comunidad.
+            </p>
+          </div>
+
+          <div class="bg-[rgba(186,214,234,0.17)] hover:bg-[rgba(186,214,234,0.32)] transition-colors duration-200 rounded-3xl p-8 shadow-md">
+            <div class="mb-6">
+              <img src="/items/Valores.svg" alt="Valores" class="w-21 h-21 text-secondary" />
+            </div>
+            <h3 class="text-3xl font-extrabold text-secondary">VALORES</h3>
+            <div class="w-4/5 h-px bg-secondary mb-4"></div>
+            <div class="text-gray-700 text-md">
+              <p><span class="font-bold">Compromiso:</span> Caminamos junto a nuestros asegurados en cada etapa.</p>
+              <p><span class="font-bold">Integridad:</span> Gestionamos tu seguro con compromiso.</p>
+              <p><span class="font-bold">Innovación:</span> Evolucionamos para anticiparnos a los desafíos del futuro.</p>
+              <p><span class="font-bold">Empatía:</span> Entendemos tus necesidades y te ayudamos a encontrar el seguro que mejor se adapte a vos.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- nuestra historia -->
+
+    <section id="nuestraHistoria"class="w-full my-10 gap-8 md:gap-32 flex flex-col items-center justify-center md:flex-row md:p-15 lg:p-30">
+      <div class="text-[#01063B] max-w-336 w-7/8 justify-center flex flex-col">
+        <h2 class="mb-9 text-4xl text-center md:text-left md:text-5xl">
+          <span class="font-medium">Nuestra</span>
+          <span class="font-extrabold italic">historia</span>
+        </h2>
+        <p class="text-md max-sm:text-sm text-justify">
+          <span class="font-light">Todo comenzó con una convicción simple, pero poderosa: las personas necesitan algo más que un seguro. Necesitan sentirse acompañadas. </span><span class="font-bold">Con más de 45 años de experiencia en el sistema financiero y asegurador</span><span class="font-light">, en 2009 decidimos dar un paso firme: transformar ese recorrido en una empresa familiar con propósito, construida sobre valores sólidos, trabajo profesional y un fuerte compromiso con la gente. </span><span class="font-bold">Así nació Ariel Silva Asesores de Seguros SRL, un proyecto de vida fundado por Ariel, Jorge y Claudia Silva</span><span class="font-light">, que combina familia, experiencia, formación y energía para crecer. Desde nuestros inicios, nacimos con el respaldo de grandes compañías líderes del sector, construyendo relaciones basadas en la confianza, la cercanía y la excelencia, que nos posicionan como referentes del mercado asegurador en la región. Hoy, ya más de 75 productores asesores comparten este camino. Contamos con Casa Central y oficina comercial en Corrientes Capital, sucursales en Goya y Resistencia, aliados en Formosa, y nuevos pasos hacia la expansión nacional. </span><span class="font-bold">Lo que más nos enorgullece es lo que nunca cambiamos: </span><span class="font-light">la forma en que miramos a cada cliente, escuchamos sus necesidades y trabajamos para proteger lo que más valora. <br>Nuestro sueño: seguir creciendo, porque cuando el propósito es proteger, el futuro siempre está asegurado.</span>
+        </p>
+      </div>
+
+      <img src="/items/nuestraHistoria.svg" alt="" class="size-6/8 sm:size-1/2 md:size-7/16">
+
+    </section>
+
+    <!-- mapa -->
+
+    <section  id="Mapa" class="bg-[#D0D3DE] rounded-[4rem] md:rounded-[8rem] shadow-xl px-8 py-12 md:px-20 md:py-16 lg:px-30 lg:py-20 flex flex-col-reverse lg:flex-row justify-around gap-8 lg:gap-12 items-center">
+
+      <div class="bg-bg px-12 py-8 md:px-20 md:py-10 lg:px-32 lg:py-12 rounded-4xl md:rounded-[3rem] flex justify-center items-center shadow-lg shrink-0 w-full lg:w-auto">
+        <img src="/items/mapaArgentina.svg" alt="Mapa de sucursales" class="w-36 md:w-52 lg:w-60 h-auto">
+      </div>
+
+      <div class="flex flex-col flex-1 w-full gap-4 lg:gap-8 lg:max-w-xl">
+        <h2 class="text-3xl md:text-4xl lg:text-5xl text-[#01063B] text-center lg:text-left">
+          ¡Seguimos <span class="italic font-extrabold">creciendo!</span>
+        </h2>
+
+        <div class="mt-2 md:mt-8 flex flex-col gap-4 md:gap-6">
+          <div>
+            <h3 class="text-xl md:text-2xl font-extrabold text-[#01063B]">Sucursal</h3>
+            <p class="text-xl md:text-2xl font-extrabold text-[#01063B]">Goya - Corrientes</p>
+            <p class="text-xs md:text-sm text-secondary mt-1">Belgrano 1167</p>
+            <p class="text-xs md:text-sm text-secondary">Whatsapp: 3777412788</p>
+          </div>
+          <div class="w-full h-0.5 bg-secondary"></div>
+          <div>
+            <h3 class="text-xl md:text-2xl font-extrabold text-[#01063B]">Sucursal</h3>
+            <p class="text-xl md:text-2xl font-extrabold text-[#01063B]">Resistencia - Chaco</p>
+            <p class="text-xs md:text-sm font-medium text-secondary mt-1">Av. Paraguay 157</p>
+            <p class="text-xs md:text-sm text-secondary">Whatsapp: 3624919099</p>
+          </div>
+          <div class="w-full h-0.5 bg-secondary"></div>
+          <div>
+            <h3 class="text-xl md:text-2xl font-extrabold text-[#01063B]">Sucursal</h3>
+            <p class="text-xl md:text-2xl font-extrabold text-[#01063B]">Palermo - Buenos Aires</p>
+            <p class="text-xs md:text-sm text-secondary mt-1">Beruti 3450 Celular</p>
+            <p class="text-xs md:text-sm text-secondary">Whatsapp: 112169940</p>
+          </div>
+        </div> 
+      </div>
+    </section>
+
+    <section class="h-1/4"></section>
+
+    <!-- tipos de seguros -->
+
+    <section id="Seguros" class="max-w-336 mx-auto px-6">
+      <div class="flex flex-col lg:flex-row justify-center items-center gap-8 lg:gap-16 mb-12">
+        <h2 class="text-3xl md:text-4xl lg:text-5xl text-primary text-center lg:text-left max-w-sm lg:max-w-lg">
+          <span class="text-secondary font-extrabold italic">¿Qué tipo de seguro</span> estás buscando?
+        </h2>
+        
+        <div class="flex">
+          <div class="relative bg-[#5A5A5A] rounded-full shadow-lg overflow-hidden">
+            <div id="toggleSlider" class="absolute top-0 left-0 h-full bg-white rounded-full transition-all duration-300 ease-in-out shadow-md"></div>
+            
+            <!-- Botones -->
+            <div class="relative flex">
+              <button id="toggleFamilia" class="toggle-btn active-toggle">
+                Para vos y tu Familia
+              </button>
+              <button id="toggleEmpresa" class="toggle-btn inactive-toggle">
+                Para tu Negocio o Empresa
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <div id="gridContainer" class="overflow-hidden p-8">
+  
+        <div id="gridTrack" class="flex transition-transform duration-500 ease-in-out">
+          
+          <div id="gridFamilia" class="grid grid-cols-[repeat(auto-fit,minmax(150px,1fr))] md:grid-cols-[repeat(auto-fit,minmax(180px,1fr))] auto-rows-[180px] md:auto-rows-[200px] max-w-336 px-12 gap-8 w-full shrink-0">
+              <div class="bg-white rounded-4xl shadow-md drop-shadow-md p-6 flex flex-col justify-between text-center text-secondary font-medium">
+                <div class="flex items-end justify-center h-24">
+                  <i class="bi bi-car-front-fill text-7xl"></i>
+                </div>
+                <span class="font-bold text-xl mt-3">Automotor Motovehículo</span>
+              </div>
+              <div class="bg-white rounded-4xl shadow-md drop-shadow-md p-6 flex flex-col justify-between text-center text-secondary font-medium">
+                <div class="flex items-end justify-center h-24">
+                  <i class="bi bi-house-door-fill text-7xl"></i>
+                </div>
+                <span class="font-bold text-xl mt-3">Hogar</span>
+              </div>
+              <div class="bg-white rounded-4xl shadow-md drop-shadow-md p-6 flex flex-col justify-between text-center text-secondary font-medium">
+                <div class="flex items-end justify-center h-24">
+                  <i class="bi bi-suitcase2-fill text-7xl"></i>
+                </div>
+                <span class="font-bold text-xl mt-3">Embarcaciones de Placer</span>
+              </div>
+              <div class="bg-white rounded-4xl shadow-md drop-shadow-md p-6 flex flex-col justify-between text-center text-secondary font-medium">
+                <div class="flex items-end justify-center h-24">
+                  <i class="bi bi-person-fill text-7xl"></i>
+                </div>
+                <span class="font-bold text-xl mt-3">Vida Individual</span>
+              </div>
+              <div class="bg-white rounded-4xl shadow-md drop-shadow-md p-6 flex flex-col justify-between text-center text-secondary font-medium">
+                <div class="flex items-end justify-center h-24">
+                  <i class="bi bi-piggy-bank-fill text-7xl"></i>
+                </div>
+                <span class="font-bold text-xl mt-3">Vida con Capitalización</span>
+              </div>
+              <div class="bg-white rounded-4xl shadow-md drop-shadow-md p-6 flex flex-col justify-between text-center text-secondary font-medium">
+                <div class="flex items-end justify-center h-24">
+                  <i class="bi bi-shield-shaded text-7xl"></i>
+                </div>
+                <span class="font-bold text-xl mt-3">Accidentes Personales</span>
+              </div>
+              <div class="bg-white rounded-4xl shadow-md drop-shadow-md p-6 flex flex-col justify-between text-center text-secondary font-medium">
+                <div class="flex items-end justify-center h-24">
+                  <i class="bi bi-heart-fill text-7xl"></i>
+                </div>
+                <span class="font-bold text-xl mt-3">Seguro de Salud</span>
+              </div>
+              <div class="bg-white rounded-4xl shadow-md drop-shadow-md p-6 flex flex-col justify-between text-center text-secondary font-medium">
+                <div class="flex items-end justify-center h-24">
+                  <i class="bi bi-heart-pulse-fill text-7xl"></i>
+                </div>
+                <span class="font-bold text-xl mt-3">Praxis Médica</span>
+              </div>
+              <div class="bg-white rounded-4xl shadow-md drop-shadow-md p-6 flex flex-col justify-between text-center text-secondary font-medium">
+                <div class="flex items-end justify-center h-24">
+                  <i class="bi bi-person-fill text-7xl"></i>
+                </div>
+                <span class="font-bold text-xl mt-3">R.C. Profesional</span>
+              </div>
+              <div class="bg-white rounded-4xl shadow-md drop-shadow-md p-6 flex flex-col justify-between text-center text-secondary font-medium">
+                <div class="flex items-end justify-center h-24">
+                  <i class="bi bi-shield-shaded text-7xl"></i>
+                </div>
+                <span class="font-bold text-xl mt-3">R.C. Comprensiva</span>
+              </div>
+          </div>
+
+          <div id="gridEmpresa" class="grid grid-cols-[repeat(auto-fit,minmax(150px,1fr))] md:grid-cols-[repeat(auto-fit,minmax(180px,1fr))] auto-rows-[180px] md:auto-rows-[200px] max-w-336 px-12 gap-8 w-full shrink-0">
+              <div class="bg-white rounded-4xl shadow-md drop-shadow-md p-6 flex flex-col justify-between text-center text-secondary font-medium">
+                <div class="flex items-end justify-center h-24">
+                  <i class="bi bi-person-fill text-7xl"></i>
+                </div>
+                <span class="font-bold text-xl mt-3">ART</span>
+              </div>
+              <div class="bg-white rounded-4xl shadow-md drop-shadow-md p-6 flex flex-col justify-between text-center text-secondary font-medium">
+                <div class="flex items-end justify-center h-24">
+                  <i class="bi bi-car-front-fill text-7xl"></i>
+                </div>
+                <span class="font-bold text-xl mt-3">Flota de Vehículos</span>
+              </div>
+              <div class="bg-white rounded-4xl shadow-md drop-shadow-md p-6 flex flex-col justify-between text-center text-secondary font-medium">
+                <div class="flex items-end justify-center h-24">
+                  <i class="bi bi-shield-shaded text-7xl"></i>
+                </div>
+                <span class="font-bold text-xl mt-3">Seguro Técnico</span>
+              </div>
+              <div class="bg-white rounded-4xl shadow-md drop-shadow-md p-6 flex flex-col justify-between text-center text-secondary font-medium">
+                <div class="flex items-end justify-center h-24">
+                  <i class="bi bi-building-fill text-7xl"></i>
+                </div>
+                <span class="font-bold text-xl mt-3">Comercio</span>
+              </div>
+              <div class="bg-white rounded-4xl shadow-md drop-shadow-md p-6 flex flex-col justify-between text-center text-secondary font-medium">
+                <div class="flex items-end justify-center h-24">
+                  <i class="bi bi-bus-front-fill text-7xl"></i>
+                </div>
+                <span class="font-bold text-xl mt-3">Transporte</span>
+              </div>
+          </div>
+
+        </div>
+      </div>
+
+    </section>
+    <section class="w-full">
+      <div>
+      </div>
+      <div class="w-full flex flex-col justify-center items-center gap-4 py-7">
+      <div class="w-11/16 h-auto gap-4 flex flex-col justify-center items-center sm:flex-row sm:w-7/8 sm:justify-between sm:items-stretch sm:gap-7 md:gap-11 lg:gap-15">
+              <div class="bg-[#39acff13] w-full flex flex-col justify-center items-center gap-2 p-5 rounded-4xl shadow-lg">
+                <img class="h-12 md:h-14 w-auto" src="/items/PolizasIndividuales.svg" alt="imagen de un auto">
+                <p class="text-2xl sm:text-3xl font-bold animate-number text-[#38519F]">+20,000</p>
+                <p class="text-md sm:text-lg text-center text-[#38519F]">Pólizas individuales</p>
+              </div>
+              <div class="bg-[#39acff13] w-full flex flex-col justify-center items-center gap-2 p-5 rounded-4xl shadow-lg">
+                <img class="h-12 md:h-14 w-auto" src="/items/Unidadesaseguradas.svg" alt="imagen de dos autos juntos">
+                <p class="text-2xl sm:text-3xl font-bold animate-number text-[#38519F]">+5,000</p>
+                <p class="text-md sm:text-lg text-center text-[#38519F]">Unidades aseguradas</p>
+              </div>
+              <div class="bg-[#39acff13] w-full flex flex-col justify-center items-center gap-2 p-5 rounded-4xl shadow-lg">
+                <img class="h-12 md:h-14 w-auto" src="/items/Personasaseguradas.svg" alt="imagen de una persona">
+                <p class="text-2xl sm:text-3xl font-bold animate-number text-[#38519F]">+420,000</p>
+                <p class="text-md sm:text-lg text-center text-[#38519F]">Personas aseguradas</p>
+              </div>
+            </div>
+
+
+            <div class="w-11/16 h-auto gap-4 flex flex-col justify-center items-center sm:flex-row sm:w-7/8 sm:justify-between sm:items-stretch sm:gap-7 md:gap-11 lg:gap-15">
+              <div class="bg-[#39acff13] w-full flex flex-col justify-center items-center gap-2 p-5 rounded-4xl shadow-lg">
+                <img class="h-12 md:h-14 w-auto" src="/items/Asegurados.svg" alt="imagen de un corazón">
+                <p class="text-2xl sm:text-3xl font-bold animate-number text-[#38519F]">+75,000</p>
+                <p class="text-md sm:text-lg text-center text-[#38519F]">Asegurados</p>
+              </div>
+              <div class="bg-[#39acff13] w-full flex flex-col justify-center items-center gap-2 p-5 rounded-4xl shadow-lg">
+                <img class="h-12 md:h-14 w-auto" src="/items/Instituciones.svg" alt="imagen de un banco">
+                <p class="text-2xl sm:text-3xl font-bold animate-number text-[#38519F]">+2,000</p>
+                <p class="text-md sm:text-lg text-center text-[#38519F]">Instituciones</p>
+              </div>
+              <div class="bg-[#39acff13] w-full flex flex-col justify-center items-center gap-2 p-5 rounded-4xl shadow-lg">
+                <img class="h-12 md:h-14 w-auto" src="/items/Comerciosasegurados.svg" alt="imagen de un portafolio">
+                <p class="text-2xl sm:text-3xl font-bold animate-number text-[#38519F]">+1,300</p>
+                <p class="text-md sm:text-lg text-center text-[#38519F]">Comercios asegurados</p>
+              </div>
+            </div>
+
+
+        </div>
+      </section>
+      <section class="w-full flex justify-center items-center pt-15">
+    <div class="max-w-7xl w-full flex flex-col items-center gap-12">
+        <div class="flex flex-col items-center gap-8">
+            <div class="flex justify-center">
+                <button class="text-white bg-[rgba(1,6,59,100)] hover:bg-[rgba(1,6,115,100)] transition-colors duration-200 rounded-3xl px-8 py-1 shadow-md font-bold text-lg">
+                    ¡Contactanos!
+                </button>
+            </div>
+            <div class="flex flex-row items-center gap-8">
+                <div class="flex justify-center">
+                      <button></button>
+                      <button></button>
+                      <button></button>
+                      <button></button>
+                      <button></button>
+                </div>
+            </div>
+        </div>
+        <div class="w-full flex justify-center">
+            <img src="/public/items/footer/as.svg" alt="Logo footer" class="">
+        </div>
+    </div>
+</section>
 
     <script type="module" src="/src/main.js"></script>
   </body>
