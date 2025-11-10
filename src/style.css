@@ -8,19 +8,22 @@
   --color-secondary: #3a519f;
   --color-secondary-hover: #4960a8;
   --color-tertiary: #bbd7eb;
-  --color-black: #1d1d1b;
-  --color-white: #edf1f6;
+  --color-black-empresa: #1d1d1b;
+  --color-white-empresa: #edf1f6;
+  --color-bg: #F6F3EE;
   --color-danger: hsl(0 85 55);
   --color-warning: hsl(35 95 50);
   --color-success: hsl(145 65 42);
   --color-info: hsl(210 90 50);
 
   --breakpoint-xs: 30rem;
+  
   --font-sans: "Nunito", system-ui, -apple-system, sans-serif;
 }
 
+
 :root {
-  --font-sans: "Inter", "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --font-sans: "Nunito", system-ui, -apple-system, sans-serif;
   
   font-family: var(--font-sans);
   line-height: 1.5;
@@ -117,8 +120,6 @@
   --shadow: inset 0 2px 8px -2px rgb(255 255 255 / 0.18), inset 0 1px 2px 0 rgb(255 255 255 / 0.20);
   --shadow-sm: inset 0 1px 2px -1px rgb(255 255 255 / 0.18), inset 0 1px 2px 0 rgb(255 255 255 / 0.20);   
 
-
-
   color: hsl(var(--text));
   background-color: hsl(var(--bg));
 }
@@ -135,4 +136,16 @@ body,
   height: 100vh;
   scrollbar-width: thin;
   scrollbar-color: rgba(0, 0, 0, 0.5) transparent;
+}
+
+.toggle-btn {
+  @apply py-2.5 px-6 transition-colors duration-300 cursor-pointer flex-1 text-center text-xs xs:text-sm md:text-base lg:text-xl whitespace-nowrap relative; 
+}
+
+.active-toggle {
+    @apply text-secondary font-bold;
+}
+
+.inactive-toggle {
+    @apply text-white;
 }
