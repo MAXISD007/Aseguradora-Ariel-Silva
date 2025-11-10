@@ -8,29 +8,33 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="/Aseguradora-Ariel-Silva/src/style.css">
     <title>Aseguradora Ariel Silva</title>
   </head>
   <body class="bg-(--white)">
-    
+
+   
+<header id="Inicio"> 
     <section>
-      <div class=" flex flex-row justify-center w-full sm:h-20 md:h-24 bg-white flex justify-center fixed z-20 border-b  border-solid border-blue-700 shadow-md">
-        <button class=" s:text-4xs m:text-xs text-white mt-8 h-10 bg-[rgba(1,6,59,100)] hover:bg-[rgba(1,6,115,100)] transition-colors duration-200 rounded-3xl p-2 px-4 shadow-md font-bold" onclick="location.href='#nuestraHistoria'">Nuestra historia</button>
-        <button class=" text-white mt-8 h-10 bg-[rgba(1,6,59,100)] hover:bg-[rgba(1,6,115,100)] transition-colors duration-200 rounded-3xl p-2 px-4 shadow-md font-bold ml-5" onclick="location.href='#Mapa'">Encontranos</button>
+      <div class=" flex flex-row justify-center w-full sm:h-20 md:h-24 bg-white flex justify-center fixed z-20  shadow-lg">
+        <button class=" s:text-4xs m:text-xs text-white mt-8 h-7 bg-[rgba(1,6,59,100)] hover:bg-[rgba(1,6,115,100)] transition-colors duration-200 rounded-3xl px-4 shadow-md font-bold" onclick="location.href='#nuestraHistoria'">Nuestra historia</button>
+        <button class="s:text-4xs m:text-xs text-white mt-8 h-7 bg-[rgba(1,6,59,100)] hover:bg-[rgba(1,6,115,100)] transition-colors duration-200 rounded-3xl px-4 shadow-md font-bold ml-5" onclick="location.href='#Mapa'">Encontranos</button>
         <div id="Inicio" class="flex  justify-center w-1/2 max-w-7xl px-4 sm:px-6 lg:px-3  sm:mt-3 md:mt-4 lg:mb-1  ">
-          <img  src="/public/logotipoHorizontal/logotipo1.svg" alt="Logo Ariel Silva" class="w-32 sm:w-40 md:w-48 lg:w-60 pb-4 ">
+          <img onclick="location.href='#Inicio'" src="/public/logotipoHorizontal/logotipo1.svg" alt="Logo Ariel Silva" class="w-32 sm:w-40 md:w-48 lg:w-60 pb-4 ">
         </div>
-        <button class=" text-white mt-8 h-10 bg-[rgba(1,6,59,100)] hover:bg-[rgba(1,6,115,100)] transition-colors duration-200 rounded-3xl p-2 px-4 shadow-md font-bold ml-5" onclick="location.href='#Seguros'">Seguros</button>
-        <button class=" text-white mt-8 h-10 bg-[rgba(1,6,59,100)] hover:bg-[rgba(1,6,115,100)] transition-colors duration-200 rounded-3xl p-2 px-4 shadow-md font-bold ml-5" onclick="location.href='#nuestraHistoria'">Contactanos</button>
+        <button class=" s:text-4xs m:text-xs text-white mt-8 h-7  bg-[rgba(1,6,59,100)] hover:bg-[rgba(1,6,115,100)] transition-colors duration-200 rounded-3xl px-8 shadow-md font-bold" onclick="location.href='#Seguros'">Seguros</button>
+        <button class="s:text-4xs m:text-xs text-white mt-8 h-7 bg-[rgba(1,6,59,100)] hover:bg-[rgba(1,6,115,100)] transition-colors duration-200 rounded-3xl px-4 shadow-md font-bold ml-5" onclick="location.href='#Contactanos'">Contactanos</button>
       </div>
     </section>
+  </header>
 
     <section class="flex ">
-            <div class="flex justify-center flex-col items-center relative w-full lg:top-1 z-1">
+            <div class="flex justify-center flex-col items-center relative lg:top-1 lg:  sm:mt-25 lg:mt-25 z-1 md:mt-25 ">
               <img src="/public/items/Fondo.svg"
-                   class="relative z-1 w-full max-h-210 sm:w-full md:w-full lg:w-9/12 xl:w-10/12 pt-16 sm:pt-20 md:pt-24 lg:pt-28 object-cover lg:">
+                   class="relative z-1  max-h-210 w-10/12  object-cover">
               <img src="/public/items/textoasegurate.svg" alt="El mejor seguro es vivir tranquilo"
-                   class=" flex absolute top-115 left-45 inset-0 z-10 w-10/12 sm:w-8/12 md:w-6/12 lg:w-6/16  pointer-events-none ">
-              <button class=" w-30 h-10 text-white bg-[rgba(1,6,59,100)] hover:bg-[rgba(1,6,115,100)] transition-colors duration-800 absolute rounded-3xl top-150 left-45 z-10 " style="font-family: 'Nunito', sans-serif;">ASEGURATE. </button>
+                   class=" flex absolute top-9/16 left-2/16 inset-0 z-10 w-6/16 pointer-events-none ">
+                <button class="text-4xs sm:text-xs md:text-sm lg:text-md xl:text-lg w-2/16 sm:w-1.5/16 h-1/12 text-white bg-[rgba(1,6,59,100)] hover:bg-[rgba(1,6,115,100)] transition-colors duration-800 absolute rounded-3xl top-12/16 left-2/16 z-10" style="font-family: 'Nunito', sans-serif;">ASEGURATE.</button>
             </div>
           </section>
              
@@ -98,7 +102,7 @@
 
     <!-- nuestra historia -->
 
-    <section id="nuestraHistoria"class="w-full my-10 gap-8 md:gap-32 flex flex-col items-center justify-center md:flex-row md:p-15 lg:p-30">
+    <section id="nuestraHistoria" class="w-full my-10 gap-8 md:gap-32 flex flex-col items-center justify-center md:flex-row md:p-15 lg:p-30">
       <div class="text-[#01063B] max-w-336 w-7/8 justify-center flex flex-col">
         <h2 class="mb-9 text-4xl text-center md:text-left md:text-5xl">
           <span class="font-medium">Nuestra</span>
@@ -327,30 +331,41 @@
 
         </div>
       </section>
-      <section class="w-full flex justify-center items-center pt-15">
-    <div class="max-w-7xl w-full flex flex-col items-center gap-12">
-        <div class="flex flex-col items-center gap-8">
-            <div class="flex justify-center">
-                <button class="text-white bg-[rgba(1,6,59,100)] hover:bg-[rgba(1,6,115,100)] transition-colors duration-200 rounded-3xl px-8 py-1 shadow-md font-bold text-lg">
-                    ¡Contactanos!
-                </button>
-            </div>
-            <div class="flex flex-row items-center gap-8">
-                <div class="flex justify-center">
-                      <button></button>
-                      <button></button>
-                      <button></button>
-                      <button></button>
-                      <button></button>
-                </div>
-            </div>
-        </div>
-        <div class="w-full flex justify-center">
-            <img src="/public/items/footer/as.svg" alt="Logo footer" class="">
-        </div>
-    </div>
-</section>
-
+<footer id="Contactanos">
+        <section class="w-full flex justify-center items-center pt-15">
+          <div class="max-w-7xl w-full flex flex-col items-center gap-12">
+              <div class="flex flex-col items-center gap-8">
+                  <div class="flex justify-center">
+                      <button class="text-white bg-[rgba(1,6,59,100)] hover:bg-[rgba(1,6,115,100)] transition-colors duration-200 rounded-3xl px-8 py-1 shadow-md font-bold text-lg">
+                          ¡Contactanos!
+                      </button>
+                  </div>
+                  <div class="flex flex-row items-center gap-8">
+                      <div class="flex justify-center gap-6">
+                        <a href="https://wa.me/" target="_blank">
+                          <img src="/public/items/footer/whatssap.svg" alt="Logo Whatsapp" class="h-8 w-8 border-2 border-[#38519F] rounded-3xl p-0 bg-[#38519F] hover:-translate-y-1 hover:transition-all hover:duration-500 hover:ease-in-out">
+                        </a>
+                        <a href="https://instagram.com/" target="_blank">
+                          <img src="/public/items/footer/instagrams.svg" alt="Instagram" class="h-8 w-8 border-2 border-[#38519F] rounded-3xl p-0 bg-[#38519F] hover:-translate-y-1 hover:transition-all hover:duration-500 hover:ease-in-out">
+                        </a>
+                        <a href="mailto:info@example.com">
+                          <img src="/public/items/footer/mail.svg" alt="Email" class="h-8 w-8 border-2 border-[#38519F] rounded-3xl p-0 bg-[#38519F] hover:-translate-y-1 hover:transition-all hover:duration-500 hover:ease-in-out"> 
+                        </a>
+                        <a href="https://linkedin.com/" target="_blank">
+                          <img src="/public/items/footer/linkeding.svg" alt="LinkedIn" class="h-8 w-8 border-2 border-[#38519F] rounded-3xl p-0 bg-[#38519F] hover:-translate-y-1 hover:transition-all hover:duration-500 hover:ease-in-out">
+                        </a>
+                         <a href="https://facebook.com/" target="_blank">
+                          <img src="/public/items/footer/facebook.svg" alt="LinkedIn" class="h-8 w-8 border-2 border-[#38519F] rounded-3xl p-0 bg-[#38519F] hover:-translate-y-1 hover:transition-all hover:duration-500 hover:ease-in-out">
+                        </a>
+                      </div>
+                  </div>
+              </div>
+              <div class="w-full flex justify-center">
+                  <img src="/public/items/footer/as.svg" alt="Logo footer" class="">
+              </div>
+          </div>
+        </section>
+</footer>
     <script type="module" src="/src/main.js"></script>
   </body>
 </html>

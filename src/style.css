@@ -14,6 +14,9 @@
   --color-warning: hsl(35 95 50);
   --color-success: hsl(145 65 42);
   --color-info: hsl(210 90 50);
+
+  --breakpoint-xs: 30rem;
+  --font-sans: "Nunito", system-ui, -apple-system, sans-serif;
 }
 
 :root {
