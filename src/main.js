@@ -239,3 +239,93 @@ document.addEventListener('DOMContentLoaded', () => {
         setInterval(showNextTestimonial, 5000);
     }
 });
+
+
+
+
+
+
+
+/* === CÓDIGO DEL CARRUSEL INFINITO === */
+
+// 1. Inyectamos el CSS de la animación
+// Esta función crea una etiqueta <style> y la añade al <head>
+// Esto nos da la animación 'infinite-scroll' sin necesitar un .config.js
+function injectKeyframes() {
+  const styleId = 'infinite-scroll-style';
+  
+  // Evitar duplicar el estilo si el script se carga varias veces
+  if (document.getElementById(styleId)) {
+    return;
+  }
+
+  const style = document.createElement('style');
+  style.id = styleId;
+  style.innerHTML = `
+    @keyframes infinite-scroll {
+      0% {
+        transform: translateX(0);
+      }
+      100% {
+        /* Nos movemos al 50% porque duplicamos el contenido.
+         Cuando el original (50% del total) desaparece, 
+         la copia (el otro 50%) está exactamente en su lugar.
+        */
+        transform: translateX(-50%);
+      }
+    }
+
+    .scroller-inner.animate-scroll {
+      /* Le damos un nombre ('infinite-scroll')
+       una duración (40s, puedes cambiarla)
+       una velocidad (linear)
+       y repetición (infinite)
+      */
+      animation: infinite-scroll 50s linear infinite;
+    }
+  `;
+  document.head.appendChild(style);
+}
+
+// 2. Lógica para encontrar y duplicar los carruseles
+function initializeInfiniteScrollers() {
+  // Encontramos todos los contenedores de carrusel en la página
+  const scrollers = document.querySelectorAll('.infinite-scroller');
+
+  if (scrollers.length === 0) {
+    console.warn("No se encontraron elementos '.infinite-scroller'.");
+    return;
+  }
+
+  scrollers.forEach(scroller => {
+    const scrollerInner = scroller.querySelector('.scroller-inner');
+
+    if (!scrollerInner) {
+      console.warn("No se encontró '.scroller-inner' dentro de:", scroller);
+      return;
+    }
+
+    // Tomamos todos los elementos (<li>) dentro de la lista
+    const scrollerContent = Array.from(scrollerInner.children);
+
+    // --- ¡AQUÍ ESTÁ EL TRUCO! ---
+    // Duplicamos cada elemento y lo añadimos al final
+    // Esto crea [Img1, Img2, Img3, Img1(copia), Img2(copia), Img3(copia)]
+    scrollerContent.forEach(item => {
+      const duplicatedItem = item.cloneNode(true);
+      // 'aria-hidden' para que los lectores de pantalla no lean la copia
+      duplicatedItem.setAttribute('aria-hidden', 'true');
+      scrollerInner.appendChild(duplicatedItem);
+    });
+
+    // Finalmente, añadimos la clase que activa la animación
+    scrollerInner.classList.add('animate-scroll');
+  });
+}
+
+// 3. Ejecutamos todo cuando la página esté lista
+// 'DOMContentLoaded' se asegura de que el HTML esté cargado
+document.addEventListener('DOMContentLoaded', () => {
+  injectKeyframes();
+  initializeInfiniteScrollers();
+});
