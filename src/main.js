@@ -311,3 +311,23 @@ document.addEventListener('DOMContentLoaded', () => {
         setInterval(showNextTestimonial, 5000)
     }
 })
+
+const whatsappFloat = document.getElementById('whatsapp-float')
+
+function handleWhatsappFloat() {
+  const scrollPosition = window.scrollY
+  const showAfter = 300
+
+  if (scrollPosition > showAfter) {
+    whatsappFloat.style.opacity = '1'
+    whatsappFloat.style.transform = 'translateY(0)'
+    whatsappFloat.style.pointerEvents = 'auto'
+  } else {
+    whatsappFloat.style.opacity = '0'
+    whatsappFloat.style.transform = 'translateY(1rem)'
+    whatsappFloat.style.pointerEvents = 'none'
+  }
+}
+
+window.addEventListener('scroll', handleWhatsappFloat)
+handleWhatsappFloat()
