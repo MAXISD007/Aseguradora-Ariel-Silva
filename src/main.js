@@ -248,84 +248,133 @@ document.addEventListener('DOMContentLoaded', () => {
 
 /* === CÓDIGO DEL CARRUSEL INFINITO === */
 
-// 1. Inyectamos el CSS de la animación
-// Esta función crea una etiqueta <style> y la añade al <head>
-// Esto nos da la animación 'infinite-scroll' sin necesitar un .config.js
-function injectKeyframes() {
-  const styleId = 'infinite-scroll-style';
-  
-  // Evitar duplicar el estilo si el script se carga varias veces
-  if (document.getElementById(styleId)) {
-    return;
-  }
+// Carousel infinito, implementado con requestAnimationFrame para evitar saltos.
+(function setupLogoCarousel() {
+    const carousels = document.querySelectorAll('.logo-carousel');
+    if (!carousels.length) return;
 
-  const style = document.createElement('style');
-  style.id = styleId;
-  style.innerHTML = `
-    @keyframes infinite-scroll {
-      0% {
-        transform: translateX(0);
-      }
-      100% {
-        /* Nos movemos al 50% porque duplicamos el contenido.
-         Cuando el original (50% del total) desaparece, 
-         la copia (el otro 50%) está exactamente en su lugar.
-        */
-        transform: translateX(-50%);
-      }
-    }
+    carousels.forEach(carousel => {
+        const track = carousel.querySelector('.logo-track');
+        if (!track) return;
 
-    .scroller-inner.animate-scroll {
-      /* Le damos un nombre ('infinite-scroll')
-       una duración (40s, puedes cambiarla)
-       una velocidad (linear)
-       y repetición (infinite)
-      */
-      animation: infinite-scroll 50s linear infinite;
-    }
-  `;
-  document.head.appendChild(style);
-}
+        // Guardar una lista de elementos originales antes de duplicar
+        const originalItems = Array.from(track.children);
+        if (!originalItems.length) return;
 
-// 2. Lógica para encontrar y duplicar los carruseles
-function initializeInfiniteScrollers() {
-  // Encontramos todos los contenedores de carrusel en la página
-  const scrollers = document.querySelectorAll('.infinite-scroller');
+        // Evitar duplicados múltiples
+        const alreadyDuplicated = track.dataset.duplicated === 'true';
+        const direction = (carousel.dataset.direction || 'ltr').toLowerCase(); // 'ltr' o 'rtl'
 
-  if (scrollers.length === 0) {
-    console.warn("No se encontraron elementos '.infinite-scroller'.");
-    return;
-  }
+        // Quitar transiciones CSS para evitar 'saltos' al actualizar transform
+        track.style.transition = 'none';
 
-  scrollers.forEach(scroller => {
-    const scrollerInner = scroller.querySelector('.scroller-inner');
+        // Configuración de velocidad
+        let speed = 0.04; // px por ms (ajusta para acelerar/ralentizar)
+        const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        if (prefersReduced) speed = 0;
 
-    if (!scrollerInner) {
-      console.warn("No se encontró '.scroller-inner' dentro de:", scroller);
-      return;
-    }
+        // Esperar a que todas las imágenes del track estén cargadas para medir anchos exactos
+        const imgs = Array.from(track.querySelectorAll('img'));
+        const waitForImages = Promise.all(imgs.map(img => {
+            if (img.complete && img.naturalWidth) return Promise.resolve();
+            return new Promise(resolve => {
+                img.addEventListener('load', resolve);
+                img.addEventListener('error', resolve);
+            });
+        }));
 
-    // Tomamos todos los elementos (<li>) dentro de la lista
-    const scrollerContent = Array.from(scrollerInner.children);
+        let pos = 0;
+        let rafId = null;
+        let lastTime = performance.now();
+        let halfWidth = 0;
 
-    // --- ¡AQUÍ ESTÁ EL TRUCO! ---
-    // Duplicamos cada elemento y lo añadimos al final
-    // Esto crea [Img1, Img2, Img3, Img1(copia), Img2(copia), Img3(copia)]
-    scrollerContent.forEach(item => {
-      const duplicatedItem = item.cloneNode(true);
-      // 'aria-hidden' para que los lectores de pantalla no lean la copia
-      duplicatedItem.setAttribute('aria-hidden', 'true');
-      scrollerInner.appendChild(duplicatedItem);
+        function computeOriginalWidth() {
+            // Sumar los anchos de los elementos originales (usar originalItems capturados antes de duplicar)
+            const gap = parseFloat(getComputedStyle(track).gap) || 0;
+            let w = 0;
+            originalItems.forEach((el, i) => {
+                const r = el.getBoundingClientRect();
+                w += r.width;
+                if (i < originalItems.length - 1) w += gap;
+            });
+            return w;
+        }
+
+        // Dirección y base para el transform
+        const dirSign = direction === 'rtl' ? 1 : -1; // ltr => -1 (translateX(-pos)), rtl => +1 (base + pos)
+        let base = 0; // se actualizará tras medir halfWidth
+
+        function step(now) {
+            const dt = now - lastTime;
+            lastTime = now;
+            pos += speed * dt;
+            if (pos >= halfWidth) pos -= halfWidth;
+            // Aplicar transform sin transición para movimiento liso
+            const value = base + dirSign * pos;
+            track.style.transform = `translateX(${value}px)`;
+            rafId = requestAnimationFrame(step);
+        }
+
+        function start() {
+            if (rafId) return;
+            lastTime = performance.now();
+            rafId = requestAnimationFrame(step);
+        }
+
+        function stop() {
+            if (rafId) {
+                cancelAnimationFrame(rafId);
+                rafId = null;
+            }
+        }
+
+        // Pausar al pasar el mouse o al hacer focus
+        carousel.addEventListener('mouseenter', stop);
+        carousel.addEventListener('mouseleave', start);
+        carousel.addEventListener('focusin', stop);
+        carousel.addEventListener('focusout', start);
+
+        // Recalcular en resize
+        let resizeTimer = null;
+        window.addEventListener('resize', () => {
+            clearTimeout(resizeTimer);
+            resizeTimer = setTimeout(() => {
+                halfWidth = computeOriginalWidth();
+            }, 150);
+        });
+
+        // Inicializar después de que las imágenes hayan cargado para evitar saltos
+        waitForImages.then(() => {
+            const originalWidth = computeOriginalWidth();
+            const containerWidth = carousel.clientWidth || carousel.offsetWidth || 0;
+
+            // Si ya no hemos duplicado, añadir clones hasta cubrir al menos containerWidth + originalWidth
+            if (!alreadyDuplicated) {
+                // Evitar caso raro: originalWidth 0
+                const minWidthNeeded = (containerWidth || 0) + (originalWidth || 0);
+                // Añadir copias completas de originalItems hasta que el track tenga ancho suficiente
+                let safety = 0;
+                while ((track.scrollWidth < minWidthNeeded) && safety < 20) {
+                    originalItems.forEach(item => track.appendChild(item.cloneNode(true)));
+                    safety++;
+                }
+                track.dataset.duplicated = 'true';
+            }
+
+            // Usar originalWidth como el ciclo de repetición
+            halfWidth = originalWidth || (track.scrollWidth / 2) || 1;
+
+            // base depende de la dirección: para rtl ponemos base = -originalWidth
+            base = direction === 'rtl' ? -halfWidth : 0;
+            // Asegurar transform inicial
+            track.style.transform = `translateX(${base}px)`;
+            if (!prefersReduced) start();
+        }).catch(() => {
+            // En caso de error con imágenes, igual iniciar con una estimación
+            halfWidth = track.scrollWidth / 2 || 1;
+            base = direction === 'rtl' ? -halfWidth : 0;
+            track.style.transform = `translateX(${base}px)`;
+            if (!prefersReduced) start();
+        });
     });
-
-    // Finalmente, añadimos la clase que activa la animación
-    scrollerInner.classList.add('animate-scroll');
-  });
-}
-
-// 3. Ejecutamos todo cuando la página esté lista
-// 'DOMContentLoaded' se asegura de que el HTML esté cargado
-document.addEventListener('DOMContentLoaded', () => {
-  injectKeyframes();
-  initializeInfiniteScrollers();
-});
+})();

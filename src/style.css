@@ -149,3 +149,75 @@ body,
 .inactive-toggle {
     @apply text-white;
 }
+
+
+
+
+
+
+/* Styles para el carrusel de marcas */
+.logo-carousel {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.logo-track {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+  white-space: nowrap;
+  will-change: transform;
+  transform: translateX(0);
+}
+
+.logo-track img {
+  height: 42px; /* tamaño base */
+  width: auto;
+  display: block;
+  filter: grayscale(0.02) saturate(0.9);
+  opacity: 0.95;
+}
+
+/* Difuminado lateral para suavizar el corte del carrusel */
+.logo-carousel {
+  position: relative;
+}
+.logo-carousel::before,
+.logo-carousel::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 8%;
+  pointer-events: none;
+  z-index: 2;
+}
+.logo-carousel::before {
+  left: 0;
+  background: linear-gradient(90deg, var(--bg) 0%, rgba(255,255,255,0) 100%);
+}
+.logo-carousel::after {
+  right: 0;
+  background: linear-gradient(270deg, var(--bg) 0%, rgba(185, 37, 37, 100) 100%);
+}
+
+/* Si el fondo no es claro, un fallback semi-transparente para el difuminado */
+@media (prefers-color-scheme: dark) {
+  .logo-carousel::before { background: linear-gradient(90deg, var(--bg) 0%, rgba(0,0,0,0) 100%); }
+  .logo-carousel::after { background: linear-gradient(270deg, var(--bg) 0%, rgba(0,0,0,0) 100%); }
+}
+
+
+@media (min-width: 640px) {
+  .logo-track img { height: 50px; }
+}
+
+@media (min-width: 1024px) {
+  .logo-track img { height: 48px; }
+}
+
+/* Si el usuario prefiere reducir movimiento, evitar animación JS */
+@media (prefers-reduced-motion: reduce) {
+  .logo-track { transition: none !important; }
+}
