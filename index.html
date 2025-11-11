@@ -13,9 +13,9 @@
   <body class="bg-bg">
     <header id="Inicio"> 
       <section>
-        <div class="flex flex-row justify-center w-full bg-bg fixed z-20 shadow-lg sm:p-2" >
-          <div id="Inicio" class="flex  justify-center w-1/2 max-w-7xl px-4 sm:px-6 lg:px-3  sm:mt-3 md:mt-4 lg:mb-1  ">
-            <img onclick="location.href='#Inicio'" src="/logotipoHorizontal/logotipo1.svg" alt="Logo Ariel Silva" class="w-32 sm:w-40 md:w-48 lg:w-60 pb-4 ">
+        <div class="p-3 sm:p-4 md:p-5 flex flex-row justify-center w-full bg-bg fixed z-20 shadow-lg" >
+          <div id="Inicio" class="flex justify-center w-1/2 max-w-7xl ">
+            <img onclick="location.href='#Inicio'" src="/logotipoHorizontal/logotipo1.svg" alt="Logo Ariel Silva" class="w-35 sm:w-40 md:w-48 lg:w-60">
           </div>
         </div>
       </section>
@@ -23,14 +23,14 @@
 
     <!-------------------------------------  SECCIÓN INICIAL  ---------------------------------------------------->
 
-    <section class="flex justify-center ">
-      <div class="flex justify-center flex-col items-center relative lg:top-1 sm:mt-25 lg:mt-25 z-1 md:mt-25">
-        <img src="/items/Fondo.svg" class="relative z-1  h-screen object-cover">
-        <div class="flex">
-          <img src="/items/textoasegurate.svg" alt="El mejor seguro es vivir tranquilo" class="flex absolute top-9/16 left-1/16 inset-0 z-10 w-6/16 pointer-events-none ">
-          <button class="text-4xs sm:text-xs md:text-sm lg:text-xl xl:text-xl text-white bg-[rgba(1,6,59,100)] hover:bg-[rgba(1,6,115,100)] transition-colors duration-800 absolute rounded-full font-extrabold px-9 py-3 top-12/16 left-1/16 z-10">ASEGURATE.</button>
-        </div>
-      </div>
+      <section class="flex justify-center ">
+            <div class="flex justify-center flex-col items-center relative mt-15 xs: lg:top-1 sm:mt-25 lg:mt-25 z-1 md:mt-25 ">
+              <img src="/public/items/Fondo.svg" class="relative z-1  max-h-210 w-11/12  object-cover max-sm:mt-1">
+              <div class="flex">
+                  <img src="/public/items/textoasegurate.svg" alt="El mejor seguro es vivir tranquilo" class=" flex absolute   top-9/16 left-1/16 inset-0 z-10 w-3/8 pointer-events-none ">
+                  <button class=" max-sm:text-[8px] min-[340px]:text-[10px] min-[400px]:text-[12px] max-sm:p-0 sm:text- md:text-md lg:text-xl xl:text-xl text-white bg-[rgba(1,6,59,100)] hover:bg-[rgba(1,6,115,100)] max-sm:w-4/16 max-sm:h-2/16  transition-colors duration-800 absolute rounded-full font-extrabold px-9 py-3 top-12/16 left-1/16 z-10">ASEGURATE.</button>
+                </div>
+              </div>
     </section>
     <!-------------------------------------  SECCIÓN MISIÓN, VISIÓN, VALORES  ---------------------------------------------------->
 
@@ -71,7 +71,7 @@
             </div>
             <h3 class="text-3xl font-extrabold text-secondary">VALORES</h3>
             <div class="w-4/5 h-px bg-secondary mb-4"></div>
-            <div class="text-gray-700 text-md text-justify">
+            <div class="text-gray-700 text-md text-justify leading-relaxed">
               <p><span class="font-bold">Compromiso:</span> Caminamos junto a nuestros asegurados en cada etapa.</p>
               <p><span class="font-bold">Integridad:</span> Gestionamos tu seguro con compromiso.</p>
               <p><span class="font-bold">Innovación:</span> Evolucionamos para anticiparnos a los desafíos del futuro.</p>
@@ -90,7 +90,7 @@
           <span class="font-medium">Nuestra</span>
           <span class="font-extrabold italic">historia</span>
         </h2>
-        <p class="text-md max-sm:text-sm text-justify">
+        <p class="text-sm md:text-md text-justify 2xl:text-lg">
           <span class="font-light">Todo comenzó con una convicción simple, pero poderosa: las personas necesitan algo más que un seguro. Necesitan sentirse acompañadas. </span><span class="font-bold">Con más de 45 años de experiencia en el sistema financiero y asegurador</span><span class="font-light">, en 2009 decidimos dar un paso firme: transformar ese recorrido en una empresa familiar con propósito, construida sobre valores sólidos, trabajo profesional y un fuerte compromiso con la gente. </span><span class="font-bold">Así nació Ariel Silva Asesores de Seguros SRL, un proyecto de vida fundado por Ariel, Jorge y Claudia Silva</span><span class="font-light">, que combina familia, experiencia, formación y energía para crecer. Desde nuestros inicios, nacimos con el respaldo de grandes compañías líderes del sector, construyendo relaciones basadas en la confianza, la cercanía y la excelencia, que nos posicionan como referentes del mercado asegurador en la región. Hoy, ya más de 75 productores asesores comparten este camino. Contamos con Casa Central y oficina comercial en Corrientes Capital, sucursales en Goya y Resistencia, aliados en Formosa, y nuevos pasos hacia la expansión nacional. </span><span class="font-bold">Lo que más nos enorgullece es lo que nunca cambiamos: </span><span class="font-light">la forma en que miramos a cada cliente, escuchamos sus necesidades y trabajamos para proteger lo que más valora. <br>Nuestro sueño: seguir creciendo, porque cuando el propósito es proteger, el futuro siempre está asegurado.</span>
         </p>
       </div>
@@ -116,22 +116,40 @@
           <div>
             <h3 class="text-xl md:text-2xl font-extrabold text-[#01063B]">Sucursal</h3>
             <p class="text-xl md:text-2xl font-extrabold text-[#01063B]">Goya - Corrientes</p>
-            <p class="text-xs md:text-sm text-secondary mt-1">Belgrano 1167</p>
-            <p class="text-xs md:text-sm text-secondary">Whatsapp: 3777412788</p>
+            <div class="flex items-center">
+              <img src="/items/casa.svg" alt="foto icono casa" class="size-6.5 md:size-9">
+              <p class="text-xs md:text-sm text-secondary mt-1">Belgrano Nº1167</p>
+            </div>
+            <div class="flex items-center">
+              <img src="/items/whatsapp.svg" alt="foto icono whatssap" class="size-3 mx-1.75 md:size-5 md:mx-2">
+              <p class="text-xs md:text-sm text-secondary">Whatsapp: 3777412788</p>
+            </div>
           </div>
           <div class="w-full h-0.5 bg-secondary"></div>
           <div>
             <h3 class="text-xl md:text-2xl font-extrabold text-[#01063B]">Sucursal</h3>
             <p class="text-xl md:text-2xl font-extrabold text-[#01063B]">Resistencia - Chaco</p>
-            <p class="text-xs md:text-sm font-medium text-secondary mt-1">Av. Paraguay 157</p>
-            <p class="text-xs md:text-sm text-secondary">Whatsapp: 3624919099</p>
+            <div class="flex items-center">
+              <img src="/items/casa.svg" alt="foto icono casa" class="size-6.5 md:size-9">
+              <p class="text-xs md:text-sm font-medium text-secondary mt-1">Av. Paraguay Nº157</p>
+            </div>
+            <div class="flex items-center">
+              <img src="/items/whatsapp.svg" alt="foto icono whatssap" class="size-3 mx-1.75 md:size-5 md:mx-2">
+              <p class="text-xs md:text-sm text-secondary">Whatsapp: 3624919099</p>
+            </div>
           </div>
           <div class="w-full h-0.5 bg-secondary"></div>
           <div>
             <h3 class="text-xl md:text-2xl font-extrabold text-[#01063B]">Sucursal</h3>
             <p class="text-xl md:text-2xl font-extrabold text-[#01063B]">Palermo - Buenos Aires</p>
-            <p class="text-xs md:text-sm text-secondary mt-1">Beruti 3450 Celular</p>
-            <p class="text-xs md:text-sm text-secondary">Whatsapp: 112169940</p>
+            <div class="flex items-center">
+              <img src="/items/casa.svg" alt="foto icono casa" class="size-6.5 md:size-9">
+              <p class="text-xs md:text-sm text-secondary mt-1">Beruti Nº3450</p>
+            </div>
+            <div class="flex items-center">
+              <img src="/items/whatsapp.svg" alt="foto icono whatssap" class="size-3 mx-1.75 md:size-5 md:mx-2">
+              <p class="text-xs md:text-sm text-secondary">Whatsapp: 112169940</p>
+            </div>
           </div>
         </div> 
       </div>
