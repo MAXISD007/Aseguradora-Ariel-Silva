@@ -6,8 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Dancing+Script:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
     <title>Aseguradora Ariel Silva</title>
   </head>
   <body class="bg-bg">
@@ -19,7 +20,6 @@
         <div class="p-3 sm:p-4 md:p-5 flex flex-row justify-center w-full bg-bg fixed z-20 shadow-lg" >
           <div id="Inicio" class="flex justify-center w-1/2 max-w-7xl ">
             <img onclick="location.href='#Inicio'" src="/logotipoHorizontal/logotipo1.svg" alt="Logo Ariel Silva" class="w-40 sm:w-43 md:w-46 lg:w-50">
-          </div>
         </div>
       </section>
     </header>
@@ -98,16 +98,19 @@
         </p>
       </div>
 
-      <img src="/items/nuestraHistoria.svg" alt="" class="size-6/8 sm:size-1/2 md:size-7/16">
+      <div class="flex flex-col items-center gap-3 w-full md:w-auto">
+        <img src="/items/nuestraHistoria.svg" alt="Nuestra Historia" class="w-85 xs:w-105 sm:w-150 md:w-180 lg:w-300 h-auto grayscale rounded-lg">
+        <p class="text-[#01063B] text-xl sm:text-2xl md:text-5xl text-center" style="font-family: 'Dancing Script', cursive;">Cuando todo comenzó...</p>
+      </div>
 
     </section>
 
     <!-------------------------------------  SECCIÓN MAPA  ---------------------------------------------------->
 
-    <section class="bg-[#D0D3DE] rounded-[4rem] md:rounded-[8rem] shadow-xl px-8 py-12 md:px-20 md:py-16 lg:px-30 lg:py-20 flex flex-col-reverse lg:flex-row justify-around gap-8 lg:gap-12 items-center">
+    <section id="mapa" class="bg-[#D0D3DE] rounded-[4rem] md:rounded-[8rem] shadow-xl px-8 py-12 md:px-20 md:py-16 lg:px-30 lg:py-20 flex flex-col-reverse lg:flex-row justify-around gap-8 lg:gap-12 items-center">
 
-      <div class="bg-bg px-12 py-8 md:px-20 md:py-10 lg:px-32 lg:py-12 rounded-4xl md:rounded-[3rem] flex justify-center items-center shadow-lg shrink-0 w-full lg:w-auto">
-        <img src="/items/mapaArgentina.svg" alt="Mapa de sucursales" class="w-36 md:w-52 lg:w-60 h-auto">
+      <div class="bg-bg z-1 p-4 md:p-6 rounded-4xl md:rounded-[3rem] shadow-lg shrink-0 w-full lg:w-1/2 h-96 lg:h-auto lg:self-stretch">
+        <div id="mapa-interactivo" class="w-full h-full rounded-3xl md:rounded-[2.5rem]"></div>
       </div>
 
       <div class="flex flex-col flex-1 w-full gap-4 lg:gap-8 lg:max-w-xl">
@@ -154,7 +157,11 @@
               <p class="text-xs md:text-sm text-secondary">Whatsapp: 112169940</p>
             </div>
           </div>
-        </div> 
+        </div>
+
+        <p class="text-2xl md:text-3xl lg:text-4xl text-[#01063B] text-center text-balance font-medium mt-4 md:mt-6">
+          Más de <span class="font-extrabold underline">75 productores</span> en todo el país
+        </p>
       </div>
     </section>
 
@@ -747,20 +754,20 @@
               </div>
               <div class="flex flex-row items-center gap-8">
                 <div class="flex justify-center gap-6">
-                  <a href="tel:+5403794467744" target="_blank">
-                    <img src="/items/footer/whatssap.svg" alt="Logo Whatsapp" class="h-12 w-12 border-2 border-[#38519F] rounded-3xl p-0 bg-[#38519F] transition duration-300 ease-in-out hover:-translate-y-1 ">
+                  <a href="https://wa.me/5403794467744?text=Hola!%20Me%20gustaría%20solicitar%20información%20sobre%20seguros" target="_blank" class="h-12 w-12 lg:h-14 lg:w-14 inline-flex items-center justify-center border-2 border-[#38519F] rounded-full bg-[#38519F] transition duration-300 ease-in-out hover:-translate-y-1">
+                    <i class="bi bi-whatsapp text-white text-2xl lg:text-3xl" style="display: flex; align-items: center; justify-content: center;"></i>
                   </a>
-                  <a href="https://www.instagram.com/arielsilvaseguros?igsh=MWRvcHYzcDFkbHo1Yw==" target="_blank">
-                    <img src="/items/footer/instagrams.svg" alt="Instagram" class="h-12 w-12 border-2 border-[#38519F] rounded-3xl p-0 bg-[#38519F] transition duration-300 ease-in-out hover:-translate-y-1 ">
+                  <a href="https://www.instagram.com/arielsilvaseguros?igsh=MWRvcHYzcDFkbHo1Yw==" target="_blank" class="h-12 w-12 lg:h-14 lg:w-14 inline-flex items-center justify-center border-2 border-[#38519F] rounded-full bg-[#38519F] transition duration-300 ease-in-out hover:-translate-y-1">
+                    <i class="bi bi-instagram text-white text-2xl lg:text-3xl" style="display: flex; align-items: center; justify-content: center;"></i>
                   </a>
-                  <a href="mailto: info@arielsilvaseguros.com.ar">
-                    <img src="/items/footer/mail.svg" alt="Email" class="h-12 w-12 border-2 border-[#38519F] rounded-3xl p-0 bg-[#38519F] transition duration-300 ease-in-out hover:-translate-y-1 "> 
+                  <a href="mailto: info@arielsilvaseguros.com.ar" class="h-12 w-12 lg:h-14 lg:w-14 inline-flex items-center justify-center border-2 border-[#38519F] rounded-full bg-[#38519F] transition duration-300 ease-in-out hover:-translate-y-1">
+                    <i class="bi bi-envelope-fill text-white text-2xl lg:text-3xl" style="display: flex; align-items: center; justify-content: center;"></i>
                   </a>
-                  <a href="https://www.linkedin.com/company/ariel-silva-asesores-de-seguros-srl/" target="_blank">
-                    <img src="/items/footer/linkeding.svg" alt="LinkedIn" class="h-12 w-12 border-2 border-[#38519F] rounded-3xl p-0 bg-[#38519F] transition duration-300 ease-in-out hover:-translate-y-1 ">
+                  <a href="https://www.linkedin.com/company/ariel-silva-asesores-de-seguros-srl/" target="_blank" class="h-12 w-12 lg:h-14 lg:w-14 inline-flex items-center justify-center border-2 border-[#38519F] rounded-full bg-[#38519F] transition duration-300 ease-in-out hover:-translate-y-1">
+                    <i class="bi bi-linkedin text-white text-2xl lg:text-3xl" style="display: flex; align-items: center; justify-content: center;"></i>
                   </a>
-                  <a href="https://www.facebook.com/share/1CubZD9qVQ/?mibextid=wwXIfr" target="_blank">
-                    <img src="/items/footer/facebook.svg" alt="LinkedIn" class="h-12 w-12 border-2 border-[#38519F] rounded-3xl p-0 bg-[#38519F] transition duration-300 ease-in-out hover:-translate-y-1 ">
+                  <a href="https://www.facebook.com/share/1CubZD9qVQ/?mibextid=wwXIfr" target="_blank" class="h-12 w-12 lg:h-14 lg:w-14 inline-flex items-center justify-center border-2 border-[#38519F] rounded-full bg-[#38519F] transition duration-300 ease-in-out hover:-translate-y-1">
+                    <i class="bi bi-facebook text-white text-2xl lg:text-3xl" style="display: flex; align-items: center; justify-content: center;"></i>
                   </a>
                 </div>
               </div>
@@ -772,7 +779,11 @@
       </section>
     </footer>
 
-    
+    <a href="https://wa.me/5403794467744" target="_blank" id="whatsapp-float" class="fixed bottom-6 right-6 h-14 w-14 lg:h-16 lg:w-16 inline-flex items-center justify-center border-2 border-[#25D366] rounded-full bg-[#25D366] shadow-lg transition-all duration-300 ease-in-out hover:scale-110 hover:shadow-2xl z-50 opacity-0 translate-y-4" style="pointer-events: none;">
+      <i class="bi bi-whatsapp text-white text-3xl lg:text-4xl" style="display: flex; align-items: center; justify-content: center;"></i>
+    </a>
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
     <script type="module" src="/src/main.js"></script>
   </body>
 </html>
