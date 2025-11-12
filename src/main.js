@@ -122,7 +122,7 @@ document.addEventListener('DOMContentLoaded', () => {
         L.marker(s.coords, { icon: sucursalIcon }).addTo(map).bindPopup(s.label)
     })
 
-    const productorIcon = L.icon({ iconUrl: '/items/userMap.svg', iconSize: [25, 25] })
+    const productorIcon = L.icon({ iconUrl: '/items/user.svg', iconSize: [25, 25] })
 
     const productores = [
         { lat: -27.5, lng: -58.8, zona: 'Corrientes - Capital' },
@@ -155,12 +155,7 @@ document.addEventListener('DOMContentLoaded', () => {
     })
 
     function actualizarProductores() {
-        const zoomActual = map.getZoom()
-        if (zoomActual >= 9) {
-            if (!map.hasLayer(productoresLayer)) map.addLayer(productoresLayer)
-        } else {
-            if (map.hasLayer(productoresLayer)) map.removeLayer(productoresLayer)
-        }
+        map.addLayer(productoresLayer)
     }
 
     map.on('zoomend', actualizarProductores)
