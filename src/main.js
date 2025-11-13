@@ -230,51 +230,51 @@ const testimonials = [
     {
         quote:
             "Cuando choco los llamo y siempre están ahí acompañándome. ¡Hace años elijo sus servicios porque nos brindan tranquilidad!",
-        author: 'ELISA FERRAGUT'
+        author: 'Elisa Ferragut'
     },
     {
         quote:
             'En todos los siniestros la oficina respondió de manera inmediata, respondiendo las dudas y guiándonos... para contar con el reemplazo... lo antes posible.',
-        author: 'ALEJANDRO VALENZUELA LOPEZ'
+        author: 'Alejandro Lopez Valenzuela '
     },
     {
         quote:
             '¡La atención es excelente! De forma presencial en la agencia de Goya, como así también por teléfono... dando respuesta siempre a las inquietudes.',
-        author: 'ZAMPEDRI REINALDO'
+        author: 'Reinaldo Zampedri'
     },
     {
         quote:
             'Tuve un siniestro grande hace poco... y valoro mucho la paciencia, la empatía y la predisposición tanto de mi agente... como del resto del equipo.',
-        author: 'SAETTONE DAIANA'
+        author: 'Daiana Saettone'
     },
     {
         quote:
             'La atención es excelente y rápida. Siempre están pendientes de que tengamos todos los documentos al día y... dispuestos a ayudarnos con lo que sea.',
-        author: 'COVIELLA MARIA INES'
+        author: 'Maria Ines Coviella'
     },
     {
         quote: 'La atención es muy buena y siempre resuelven cualquier dificultad que uno tenga con rapidez.',
-        author: 'GERARDO FABIAN FARGUEZ'
+        author: 'Fabian Gerardo Farguez'
     },
     {
         quote:
             'Su asesoramiento es preciso y personalizado, destacando la eficiencia y rapidez en la solución de todos los inconvenientes... brindándome continuamente tranquilidad.',
-        author: 'JOSE LUIS GORBEÑA'
+        author: 'Jose Luis Gorbeña'
     },
     {
         quote:
             'La atención es muy buena, rápida y la explicación excelente, se entiende perfectamente. Pude gestionar mis consultas e inquietudes rápido y sin problema.',
-        author: 'ZABALA NATALIA'
+        author: 'Natalia Zabala'
     },
     {
         quote:
             'Muy buena atención personalizada, siempre con predisposición a resolver los casos pensando en los clientes. Los tiempos de respuestas son muy cortos.',
-        author: 'ING ELENA GONZALEZ PERINI'
+        author: 'Ing Elena Perini Gonzales'
     },
     {
         quote:
             'Por precio compite cualquiera, pero a la hora de los problemas uno quiere soluciones y siempre encontré una persona que me ayude con eso dentro de tu empresa.',
-        author: 'DOBLE CLICK'
+        author: 'Empresa DOBLE CLICK'
     }
 ]
 
