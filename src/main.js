@@ -93,7 +93,18 @@ window.addEventListener('resize', () => {
 })
 
 document.addEventListener('DOMContentLoaded', () => {
-    const map = L.map('mapa-interactivo', { scrollWheelZoom: false })
+
+    const argentinaBounds = L.latLngBounds(
+        L.latLng(-55.1, -73.6),
+        L.latLng(-21.8, -53.6)
+    );
+    const map = L.map('mapa-interactivo', {
+        scrollWheelZoom: false,
+        maxBounds: argentinaBounds, 
+        minZoom: 5 
+    });
+
+    map.fitBounds(argentinaBounds);
 
     L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
         attribution:
@@ -119,19 +130,19 @@ document.addEventListener('DOMContentLoaded', () => {
     map.fitBounds(sucursalGroup.getBounds().pad(0.2))
 
     sucursales.forEach(s => {
-        L.marker(s.coords, { icon: sucursalIcon }).addTo(map).bindPopup(s.label)
+        L.marker(s.coords, { icon: sucursalIcon, zIndexOffset: 1000 }).addTo(map).bindPopup(s.label)
     })
 
-    const productorIcon = L.icon({ iconUrl: '/items/user.svg', iconSize: [25, 25] })
+    const productorIcon = L.icon({ iconUrl: '/items/pin-primary.svg', iconSize: [40, 40] })
 
     const productores = [
         { lat: -27.5, lng: -58.8, zona: 'Corrientes - Capital' },
         { lat: -28.2538, lng: -58.6258, zona: 'Corrientes - Saladas' },
-        { lat: -29.7833, lng: -58.0833, zona: 'Corrientes - Curuzu Cuatia' },
+        { lat: -29.7833, lng: -58.0833, zona: 'Corrientes - Curuzú Cuatiá' },
         { lat: -29.2, lng: -58.0833, zona: 'Corrientes - Mercedes' },
         { lat: -30.2494, lng: -57.6344, zona: 'Corrientes - Monte Caseros' },
         { lat: -29.7167, lng: -57.0833, zona: 'Corrientes - Paso de los Libres' },
-        { lat: -28.55, lng: -56.0333, zona: 'Corrientes - Santo Tome' },
+        { lat: -28.55, lng: -56.0333, zona: 'Corrientes - Santo Tomé' },
         { lat: -29.175, lng: -56.6414, zona: 'Corrientes - La Cruz' },
         { lat: -29.1128, lng: -56.5556, zona: 'Corrientes - Alvear' },
         { lat: -27.75, lng: -57.6167, zona: 'Corrientes - General Paz' },
