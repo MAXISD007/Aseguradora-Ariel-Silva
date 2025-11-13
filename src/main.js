@@ -94,18 +94,17 @@ window.addEventListener('resize', () => {
 
 document.addEventListener('DOMContentLoaded', () => {
 
-    const argentinaBounds = L.latLngBounds(
-        L.latLng(-55.1, -73.6),
-        L.latLng(-21.8, -53.6)
+    const customBounds = L.latLngBounds(
+        L.latLng(-40.0, -66.0), 
+        L.latLng(-24.0, -53.0)  
     );
     const map = L.map('mapa-interactivo', {
         scrollWheelZoom: false,
-        maxBounds: argentinaBounds, 
-        minZoom: 5 
+        maxBounds: customBounds, 
+        minZoom: 6 
     });
 
-    map.fitBounds(argentinaBounds);
-
+    map.fitBounds(customBounds);
     L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
         attribution:
             '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>'
@@ -127,7 +126,7 @@ document.addEventListener('DOMContentLoaded', () => {
     })
 
     const sucursalGroup = L.featureGroup(markerList)
-    map.fitBounds(sucursalGroup.getBounds().pad(0.2))
+    map.fitBounds(sucursalGroup.getBounds().pad(0.3))
 
     sucursales.forEach(s => {
         L.marker(s.coords, { icon: sucursalIcon, zIndexOffset: 1000 }).addTo(map).bindPopup(s.label)
