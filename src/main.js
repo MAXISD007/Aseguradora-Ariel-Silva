@@ -132,7 +132,7 @@ document.addEventListener('DOMContentLoaded', () => {
         L.marker(s.coords, { icon: sucursalIcon, zIndexOffset: 1000 }).addTo(map).bindPopup(s.label)
     })
 
-    const productorIcon = L.icon({ iconUrl: '/items/pin-primary.svg', iconSize: [40, 40] })
+    const productorIcon = L.icon({ iconUrl: '/items/user-primary.svg', iconSize: [25, 25] })
 
     const productores = [
         { lat: -27.5, lng: -58.8, zona: 'Corrientes - Capital' },
@@ -279,13 +279,13 @@ const testimonials = [
     {
         quote:
             'Muy buena atención personalizada, siempre con predisposición a resolver los casos pensando en los clientes. Los tiempos de respuestas son muy cortos.',
-        author: 'Ing Elena Perini Gonzales'
+        author: 'Ing. Elena Perini Gonzales'
     },
     {
         quote:
             'Por precio compite cualquiera, pero a la hora de los problemas uno quiere soluciones y siempre encontré una persona que me ayude con eso dentro de tu empresa.',
         author: 'Empresa DOBLE CLICK'
-    }
+}
 ]
 
 const quoteElement = document.getElementById('testimonial-quote')
